@@ -82,6 +82,15 @@ table.truthTable tr.highlightTTRow{
     color: #fff;
 }
 
+table.fuzzySet{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr.numerator{
+  border-bottom: 1px solid black;
+}
+
 .changingTextStyle{
     stroke: #ff4600;
     stroke-width: 1;
@@ -197,6 +206,7 @@ button.displayActivatedButton{
   transition: .4s;
 }
 
+/*
 .slider:before {
   position: absolute;
   content: "";
@@ -208,6 +218,7 @@ button.displayActivatedButton{
   -webkit-transition: .4s;
   transition: .4s;
 }
+*/
 
 input:checked + .slider {
   background-color: #2196F3;
@@ -230,12 +241,12 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-} 
+}
 
 
 .hyperlink{
     color:#f00;
-    font-size: 16px; 
+    font-size: 16px;
     text-decoration: underline;
 }
 
