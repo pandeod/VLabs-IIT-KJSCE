@@ -22,48 +22,119 @@
         <!-- jQuery 2.2.3 -->
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <link href="../../src/Styles.css" rel="stylesheet" />
-        <style>
-            .optradio1{
-                padding:20px;
-            }
-        </style>
-        
-        <script>
+		
+		<script>
             $(document).ready(function(){
-                $(".optradio1").click(function(){
-                    ////alert("clicked");
+                $("#view").click(function(){
+                    var count=0;
+					
+                    //alert("clicked");
                     $("#optradio1Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio1Ans").offset().top-300
-                    }, 1000);
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
                     $('.optradio1').attr('disabled','disabled');
-                });
-                $(".optradio2").click(function(){
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="D")
+                    {
+                       count=count+1;
+                    }
+                    
+                
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio2Ans").offset().top-300
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
-                });
-                $(".optradio3").click(function(){
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="D")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio3Ans").offset().top-300
                     }, 1000);
                     $('.optradio3').attr('disabled','disabled');
-                });
-                $(".optradio4").click(function(){
-                    //alert("clicked");
+
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
                     $("#optradio4Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio4Ans").offset().top-300
                     }, 1000);
                     $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
                 });
+               
             });
-        </script>
+</script>
+<style type="text/css">
+  .label-medium 
+   {
+       vertical-align: super;
+       font-size: large;
+   }
+
+   .optradio1
+   {
+       padding:20px;
+   }
+        </style>
+
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         
@@ -118,48 +189,68 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom :5%;">
                     <h3 style="margin-top:5%">Post Test</h3>
                     <p class="MsoNormal" style="text-align:justify">
                         <!-- Post Test content goes here -->                        
                         <h3>1. Which of these is not a technique of Pre-processing ?</h3>
 
-                        <input type="radio" class="optradio1" name="q1" value="1">A. Binarization<br>
-                        <input type="radio" class="optradio1" name="q1" value="2">B. Noise Reduction<br>
-                        <input type="radio" class="optradio1" name="q1" value="3">C. Skew Correction<br>
-                        <input type="radio" class="optradio1" name="q1" value="4">D. Zoning<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="A">A. Binarization<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="B">B. Noise Reduction<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="C">C. Skew Correction<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="D">D. Zoning<br>
                         <br />
-                        <p id="optradio1Ans" class="testAns" style="display:none;"> Ans is D</p>
+		              <p id="optradio1Ans" class="testAns" style="display:none;">
+		              <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+		              &nbsp; &nbsp; Correct ans: D <br>Explanation : because it is feature extraction technique.s </span></p>
+                     
                         
                         <h3>2. Which of these is not a technique of Feature Extraction ?</h3>
                     
-                        <input type="radio" class="optradio2" name="q2" value="1"> A. Projection Histograms<br>
-                        <input type="radio" class="optradio2" name="q2" value="2"> B. Profiles<br>
-                        <input type="radio" class="optradio2" name="q2" value="3"> C. Global transformations and moments<br>
-                        <input type="radio" class="optradio2" name="q2" value="4"> D. Slant Removal<br>
-
+                        <input type="radio" class="optradio2" name="optradio2" value="A"> A. Projection Histograms<br>
+                        <input type="radio" class="optradio2" name="optradio2" value="B"> B. Profiles<br>
+                        <input type="radio" class="optradio2" name="optradio2" value="C"> C. Global transformations and moments<br>
+                        <input type="radio" class="optradio2" name="optradio2" value="D"> D. Slant Removal<br>
                         <br />
-                        <p id="optradio2Ans" class="testAns" style="display:none;"> Ans is D</p>
+						<p id="optradio2Ans" class="testAns" style="display:none;">
+		              <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+		              &nbsp; &nbsp; Correct ans: D <br>Explanation : because it is pre-processing technique. </span></p>
+                        
 
                         <h3>3. Which of these is a correct sequence in Optical Character Recognition ?</h3>
                     
-                        <input type="radio" class="optradio3" name="q3" value="1"> A. 
+                        <input type="radio" class="optradio3" name="optradio3" value="A"> A. 
                         <div><ol><li>Segmentation</li><li>Pre-processing</li><li>Post-processing</li><li>Feature Extraction</li><li>Classification</li></ol></div><br>
-                        <input type="radio" class="optradio3" name="q3" value="2"> B. 
+                        <input type="radio" class="optradio3" name="optradio3" value="B"> B. 
                         <div><ol><li>Segmentation</li><li>Pre-processing</li><li>Feature Extraction</li><li>Post-processing</li><li>Classification</li></ol></div><br>
-                        <input type="radio" class="optradio3" name="q3" value="3"> C.                         
+                        <input type="radio" class="optradio3" name="optradio3" value="C"> C.                         
                         <div><ol><li>Pre-processing</li><li>Segmentation</li><li>Feature Extraction</li><li>Classification</li><li>Post-processing</li></ol></div><br>
-                        <input type="radio" class="optradio3" name="q3" value="4"> D. 
+                        <input type="radio" class="optradio3" name="optradio3" value="D"> D. 
                         <div><ol><li>Pre-processing</li><li>Post-processing</li><li>Feature Extraction</li><li>Segmentation</li><li>Classification</li></ol></div><br>
-                        <p id="optradio3Ans" class="testAns" style="display:none;"> Ans is A</p>
+                        <br>
+						<p id="optradio3Ans" class="testAns" style="display:none;">
+		              <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+		              &nbsp; &nbsp; Correct ans: A <br>Explanation : image is enhanced -> seperated in constituent characters -> features are extracted from image -> 
+					  characters categorized into particular class</span></p>
+						
                             
                         <h3>4. Which of these segmentation techniques is used to extract words ?</h3>
 
-                        <input type="radio" class="optradio4" name="q4" value="1"> A. Explicit Segmentation<br>
-                        <input type="radio" class="optradio4" name="q4" value="2"> B. Implicit Segmentation<br>
-
+                        <input type="radio" class="optradio4" name="optradio4" value="A"> A. Explicit Segmentation<br>
+                        <input type="radio" class="optradio4" name="optradio4" value="B"> B. Implicit Segmentation<br>
                         <br />
-                        <p id="optradio4Ans" class="testAns" style="display:none;"> Ans is A</p>
+						<p id="optradio4Ans" class="testAns" style="display:none;">
+		              <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+		              &nbsp; &nbsp; Correct ans: A <br>Explanation : because it is robust and content is not need to be known in advance. </span></p>
+
+					  
+						<br><br>
+                      <div>
+                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                         </div>  
+                      </div>
                     </p>
                 </section>
                 <!-- /.content -->

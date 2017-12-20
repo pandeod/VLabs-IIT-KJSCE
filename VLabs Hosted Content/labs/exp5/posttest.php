@@ -23,50 +23,133 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <link href="../../src/Styles.css" rel="stylesheet" />
         
-        <script>
+ <script>
             $(document).ready(function(){
-                $(".optradio1").click(function(){
-                    ////alert("clicked");
+                $("#view").click(function(){
+                    var count=0;
+					
+                    //alert("clicked");
                     $("#optradio1Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio1Ans").offset().top-300
-                    }, 1000);
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
                     $('.optradio1').attr('disabled','disabled');
-                });
-                $(".optradio2").click(function(){
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="B")
+                    {
+                       count=count+1;
+                    }
+                    
+                
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio2Ans").offset().top-300
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
-                });
-                $(".optradio3").click(function(){
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="C")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio3Ans").offset().top-300
                     }, 1000);
                     $('.optradio3').attr('disabled','disabled');
-                });
-                $(".optradio4").click(function(){
-                    //alert("clicked");
+
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
                     $("#optradio4Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio4Ans").offset().top-300
                     }, 1000);
                     $('.optradio4').attr('disabled','disabled');
-                });
-                $(".optradio5").click(function(){
-                    //alert("clicked");
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
                     $("#optradio5Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio5Ans").offset().top-300
                     }, 1000);
                     $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
                 });
+               
             });
-        </script>
+</script>
+<style type="text/css">
+  .label-medium 
+   {
+       vertical-align: super;
+       font-size: large;
+   }
+</style>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         
@@ -121,60 +204,71 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom :5%;">
                     <h3 style="margin-top:5%">Post Test</h3>
                     <p class="MsoNormal" style="text-align:justify">
                         <!-- Post Test content goes here -->
-                         <h3>1. Hebbian learning rule falls under which category ?</h3>
+						
+<h3>1.Hebbian learning rule falls under which category  ?</h3>
+<input type="radio" class="optradio1" name="optradio1" value="A"> A.Supervised learning rule   <br>
+<input type="radio" class="optradio1" name="optradio1" value="B"> B.Unsupervised learning rule   <br>
+<input type="radio" class="optradio1" name="optradio1" value="C"> C.Reinforcement learning rule   <br>
+<input type="radio" class="optradio1" name="optradio1" value="D"> D.None of the above   <br>
+<br>
+<p id="optradio1Ans" class="testAns" style="display:none;">
+<span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+&nbsp; &nbsp; Correct ans: B <br>Explanation :Hebbian learning rule comes under Unsupervised learning rule.  </span></p>
 
-                        <input type="radio" class="optradio1" name="q1" value="1">A. Supervised learning rule<br>
-                        <input type="radio" class="optradio1" name="q1" value="2">B. Unsupervised learning rule<br>
-                        <input type="radio" class="optradio1" name="q1" value="3">C. Reinforcement learning rule<br>
-                        <input type="radio" class="optradio1" name="q1" value="4">D. None of the above<br>
-                        <br />
-                        <p id="optradio1Ans" class="testAns" style="display:none;"> Ans is B</p>
-                        
-                        <h3>2. Which of the following is the property of Hebbian synapse ?</h3>
-                    
-                        <input type="radio" class="optradio2" name="q2" value="1"> A. It is very much time dependant<br>
-                        <input type="radio" class="optradio2" name="q2" value="2"> B. It is strongly interacting<br>
-                        <input type="radio" class="optradio2" name="q2" value="3"> C. Both A and B<br>
-                        <input type="radio" class="optradio2" name="q2" value="4"> D. None of the above<br>
 
-                        <br />
-                        <p id="optradio2Ans" class="testAns" style="display:none;"> Ans is C</p>
 
-                        <h3>3. Unsupervised hebbian rule is also known as</h3>
-                    
-                        <input type="radio" class="optradio3" name="q3" value="1"> A. Associative learning<br>
-                        <input type="radio" class="optradio3" name="q3" value="2"> B. Clustering<br>
-                        <input type="radio" class="optradio3" name="q3" value="3"> C. K-means<br>
-                        <input type="radio" class="optradio3" name="q3" value="4"> D. Perceptron<br>      
+<h3>2.Which of the following is the property of Hebbian synapse  ?</h3>
+<input type="radio" class="optradio2" name="optradio2" value="A"> A.It is very much time dependant   <br>
+<input type="radio" class="optradio2" name="optradio2" value="B"> B.It is strongly interacting   <br>
+<input type="radio" class="optradio2" name="optradio2" value="C"> C.Both A and B   <br>
+<input type="radio" class="optradio2" name="optradio2" value="D"> D.None of the above   <br>
+<br>
+<p id="optradio2Ans" class="testAns" style="display:none;">
+<span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+&nbsp; &nbsp; Correct ans: C <br>Explanation : It is both time dependant & interacting. </span></p>
 
-                        <br />
-                        <p id="optradio3Ans" class="testAns" style="display:none;"> Ans is A</p>
-                            
-                        <h3>4. Which of the following is the correct definition of the anti neuron theory ?</h3>
 
-                        <input type="radio" class="optradio4" name="q4" value="1"> A. An increase in synaptic efficacy arises from the presynaptic cell's repeated and persistent stimulation of the postsynaptic cell. <br>
-                        <input type="radio" class="optradio4" name="q4" value="2"> B. Dictating reduction of the strength of synaptic connectivity between neurons following a scenario in which a neuron directly contributes to production of an action potential in another neuron<br>
-                        <input type="radio" class="optradio4" name="q4" value="3"> C. Both A and B<br>
-                        <input type="radio" class="optradio4" name="q4" value="4"> D. None of the above<br>
 
-                        <br />
-                        <p id="optradio4Ans" class="testAns" style="display:none;"> Ans is B</p>
+<h3>3.Unsupervised hebbian rule is also known as  </h3>
+<input type="radio" class="optradio3" name="optradio3" value="A"> A.Associative learning   <br>
+<input type="radio" class="optradio3" name="optradio3" value="B"> B.Clustering   <br>
+<input type="radio" class="optradio3" name="optradio3" value="C"> C.K-means   <br>
+<input type="radio" class="optradio3" name="optradio3" value="D"> D.Perceptron   <br>
+<br>
+<p id="optradio3Ans" class="testAns" style="display:none;">
+<span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+&nbsp; &nbsp; Correct ans: A </span></p>
 
-                        <h3>5. What type of activation function is used in this experiment?</h3>
 
-                        <input type="radio" class="optradio5" name="q4" value="1"> A. Hardlimit activation function <br>
-                        <input type="radio" class="optradio5" name="q4" value="2"> B. Softlimit activation function<br>
-                        <input type="radio" class="optradio5" name="q4" value="3"> C. Both A and B<br>
-                        <input type="radio" class="optradio5" name="q4" value="4"> D. None of the above<br>
-                        <br />
-                        <p id="optradio5Ans" class="testAns" style="display:none;"> Ans is B</p>
 
-                        
-                    </p>
+<h3>4.Which of the following is the correct definition of the anti neuron theory  ?</h3>
+<input type="radio" class="optradio4" name="optradio4" value="A"> A.An increase in synaptic efficacy arises from the presynaptic cell's repeated and persistent stimulation of the postsynaptic cell.   <br>
+<input type="radio" class="optradio4" name="optradio4" value="B"> B.Dictating reduction of the strength of synaptic connectivity between neurons following a scenario in which a neuron directly contributes to production of an action potential in another neuron   <br>
+<input type="radio" class="optradio4" name="optradio4" value="C"> C.Both A and B   <br>
+<input type="radio" class="optradio4" name="optradio4" value="D"> D.None of the above   <br>
+<br>
+<p id="optradio4Ans" class="testAns" style="display:none;">
+<span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+&nbsp; &nbsp; Correct ans: B <br>Explanation : o/p is reverse of i/p </span></p>
+
+
+
+<h3>5.What type of activation function is used in this experiment?</h3>
+<input type="radio" class="optradio5" name="optradio5" value="A"> A.Hardlimit activation function   <br>
+<input type="radio" class="optradio5" name="optradio5" value="B"> B.Softlimit activation function   <br>
+<input type="radio" class="optradio5" name="optradio5" value="C"> C.Both A and B   <br>
+<input type="radio" class="optradio5" name="optradio5" value="D"> D.None of the above   <br>
+<br>
+<p id="optradio5Ans" class="testAns" style="display:none;">
+<span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+&nbsp; &nbsp; Correct ans: B<br>Explanation : o/p is not depend on strict limits.</span></p>
+
+
+                 
 
                     <b>Hints:-</b> Try these values and verify that these weights will classify all the points correctly.
                     If you set the weights to any other values, the learning will converge leading approximately to these weights.<br/><br/>
@@ -189,7 +283,15 @@
 
                     w<sub>31</sub> = 0, 
                     w<sub>32</sub> = -1, 
-                    w<sub>33</sub> = -1.5
+                    w<sub>33</sub> = -1.5 <br><br>
+					
+		<div>
+           <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+        &nbsp; Your score is : <span id="score"> </span> out of 5
+          </div>  
+      </div>
+				    </p>
                 </section>
                 <!-- /.content -->
         

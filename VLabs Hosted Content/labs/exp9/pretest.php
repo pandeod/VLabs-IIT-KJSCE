@@ -20,6 +20,94 @@
         
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <link href="../../src/Styles.css" rel="stylesheet" />
+		
+		<script>
+            $(document).ready(function(){
+                $("#view").click(function(){
+                    var count=0;
+					
+                    //alert("clicked");
+                    $("#optradio1Ans").slideDown();
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
+                    $('.optradio1').attr('disabled','disabled');
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="D")
+                    {
+                       count=count+1;
+                    }
+                    
+                
+                    //alert("clicked");
+                    $("#optradio2Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio2Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio2').attr('disabled','disabled');
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="C")
+                    {
+                       count=count+1;
+                    }
+                
+                    //alert("clicked");
+                    $("#optradio3Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio3Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio3').attr('disabled','disabled');
+
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					
+					
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
+                });
+               
+            });
+</script>
+<style type="text/css">
+  .label-medium 
+   {
+       vertical-align: super;
+       font-size: large;
+   }
+</style>		
+		
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <?php
@@ -72,69 +160,53 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom :5%;">
                     <h3 style="margin-top:5%">Pre Test</h3>
                     <p class="MsoNormal" style="text-align:justify">
                         <!-- Pre Test content goes here -->
-                        <script>
-                            $(document).ready(function () {
-                                $(".optradio1").click(function () {
-                                    ////alert("clicked");
-                                    $("#optradio1Ans").slideDown();
-                                    $('html, body').animate({
-                                        scrollTop: $("#optradio1Ans").offset().top-300
-                                    }, 1000);
-                                    $('.optradio1').attr('disabled','disabled');
-                                });
-                                $(".optradio2").click(function () {
-                                    //alert("clicked");
-                                    $("#optradio2Ans").slideDown();
-                                    $('html, body').animate({
-                                        scrollTop: $("#optradio2Ans").offset().top-300
-                                    }, 1000);
-                                    $('.optradio2').attr('disabled','disabled');
-                                });
-                                $(".optradio3").click(function () {
-                                    //alert("clicked");
-                                    $("#optradio3Ans").slideDown();
-                                    $('html, body').animate({
-                                        scrollTop: $("#optradio3Ans").offset().top-300
-                                    }, 1000);
-                                    $('.optradio3').attr('disabled','disabled');
-                                });
-
-                            });
-
-            </script>
             <br>
             <h3>1.If A={ 0 &divide x1,0.4 &divide x2,1 &divide x3,0.5 &divide x4 } and B={ 1 &divide x1,0.5 &divide x2,1 &divide x3,0.6 &divide x4 } then &#956 <sub>A &#8745; B</sub> </h3>
-            <input type="radio" class="optradio1" name="q4" value="1"> A. &#956 <sub>A&#8745;B</sub>={ 0.6 &divide X1, 0.8 &divide X2, 1 &divide X3, 0.2 &divide X4 } <br>
-            <input type="radio" class="optradio1" name="q4" value="2"> B. &#956 <sub>A&#8745;B</sub>={ 0 &divide X1, 0.5 &divide X2, 1 &divide X3, 0.6 &divide X4 }  <br>
-            <input type="radio" class="optradio1" name="q4" value="3"> C. &#956 <sub>A&#8745;B</sub>={ 1 &divide X1, 0.5 &divide X2, 1 &divide X3, 0.6 &divide X4 } <br>
-            <input type="radio" class="optradio1" name="q4" value="4"> D. &#956 <sub>A&#8745;B</sub>={ 0 &divide X1, 0.4 &divide X2, 1 &divide X3, 0.5 &divide X4 } <br>
-             <br>
-            <p id="optradio1Ans" class="testAns" style="display:none;"> Ans is D</p>
-             <br>
+
+		                 <input type="radio" class="optradio1" name="optradio1" value="A"> A.&#956 <sub>A&#8745;B</sub>={ 0.6 &divide X1, 0.8 &divide X2, 1 &divide X3, 0.2 &divide X4 } <br>   
+		                 <input type="radio" class="optradio1" name="optradio1" value="B"> B.&#956 <sub>A&#8745;B</sub>={ 0 &divide X1, 0.5 &divide X2, 1 &divide X3, 0.6 &divide X4 }  <br>   
+		                 <input type="radio" class="optradio1" name="optradio1" value="C"> C.&#956 <sub>A&#8745;B</sub>={ 1 &divide X1, 0.5 &divide X2, 1 &divide X3, 0.6 &divide X4 } <br>  
+		                 <input type="radio" class="optradio1" name="optradio1" value="D"> D.&#956 <sub>A&#8745;B</sub>={ 0 &divide X1, 0.4 &divide X2, 1 &divide X3, 0.5 &divide X4 } <br>  
+		                 <br>
+		                 <p id="optradio1Ans" class="testAns" style="display:none;">
+		                 <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+		                 &nbsp; &nbsp; Correct ans: D <br>Explanation : As it is Intersection , Consider min values. </span></p>
+			
             <h3>2. What is the main difference between probability and fuzzy logic ?</h3><br>
-              <input class="optradio2" type="radio" name="q2" value="1">
-              A.  Fuzzy logic is probability in disguise.<br>
-              <input class="optradio2" type="radio" name="q2" value="2">
-              B. Fuzzy logic is the likelihood of an event occuring and probablility is the extent of that event.<br>
-              <input class="optradio2" type="radio" name="q2" value="3">
-              C. Probability is ADDITIVE, meaning all its values must add up to one.<br>
-              <input class="optradio2" type="radio" name="q2" value="4">
-              D. Probability dissipates with decreasing information.<br>
-              <p id="optradio2Ans" class="testAns" style="display:none;"> Ans is C</p><br>
-			<br>
+			
+                      <input type="radio" class="optradio2" name="optradio2" value="A"> A.Fuzzy logic is probability in disguise.<br>   
+                      <input type="radio" class="optradio2" name="optradio2" value="B"> B.Fuzzy logic is the likelihood of an event occuring and probablility is the extent of that event.<br>   
+                      <input type="radio" class="optradio2" name="optradio2" value="C"> C.Probability is ADDITIVE, meaning all its values must add up to one.<br>   
+                      <input type="radio" class="optradio2" name="optradio2" value="D"> D.Probability dissipates with decreasing information.<br>   
+                      <br>
+                      <p id="optradio2Ans" class="testAns" style="display:none;">
+                      <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : Total of Probability of each case of event is 1. </span></p>
+			
+              
 			<h3>3.The bounded sum (A &#8853; B) of two fuzzy set A<sub>&#816;</sub> and BA<sub>&#816;</sub> is defined as </h3>
-                       
-                        <input type="radio" class="optradio3" name="q3" value="1"> A. &#956; <sub>A<sub>&#816;</sub> &#8853; B<sub>&#816;</sub></sub>(x)=min{1,&#956; <sub>A</sub>(x) + &#956; <sub>B</sub>(x)}<br>
-                        <input type="radio" class="optradio3" name="q3" value="2"> B. &#956; <sub>A<sub>&#816;</sub> &#8857; B<sub>&#816;</sub></sub>(x)=max{0,&#956; <sub>A</sub>(x) + &#956; <sub>B</sub>(x)} <br>
-                        <input type="radio" class="optradio3" name="q3" value="3"> C. &#956; <sub>A<sub>&#816;</sub> + B<sub>&#816;</sub></sub>(x)=&#956; <sub>A<sub>&#816;</sub></sub>(x)+&#956; <sub>B<sub>&#816;</sub></sub>(x)-&#956; <sub>A<sub>&#816;</sub></sub>(x).&#956; <sub>B<sub>&#816;</sub></sub>(x)<br>
-                        <input type="radio" class="optradio3" name="q3" value="4"> D. None of these<br>
-                        <p id="optradio3Ans" class="testAns" style="display:none;"> Ans is A</p>
-                        
-             
+
+                      <input type="radio" class="optradio3" name="optradio3" value="A"> A.&#956; <sub>A<sub>&#816;</sub> &#8853; B<sub>&#816;</sub></sub>(x)=min{1,&#956; <sub>A</sub>(x) + &#956; <sub>B</sub>(x)}<br>   
+                      <input type="radio" class="optradio3" name="optradio3" value="B"> B.&#956; <sub>A<sub>&#816;</sub> &#8857; B<sub>&#816;</sub></sub>(x)=max{0,&#956; <sub>A</sub>(x) + &#956; <sub>B</sub>(x)} <br>   
+                      <input type="radio" class="optradio3" name="optradio3" value="C"> C.&#956; <sub>A<sub>&#816;</sub> + B<sub>&#816;</sub></sub>(x)=&#956; <sub>A<sub>&#816;</sub></sub>(x)+&#956; <sub>B<sub>&#816;</sub></sub>(x)-&#956; <sub>A<sub>&#816;</sub></sub>(x).&#956; <sub>B<sub>&#816;</sub></sub>(x)<br>
+                      <input type="radio" class="optradio3" name="optradio3" value="D"> D.None of these<br>   
+                      <br>
+                      <p id="optradio3Ans" class="testAns" style="display:none;">
+                      <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation :It is known, &#956; <sub>A<sub>&#816;</sub> &#8853; B<sub>&#816;</sub></sub>(x)=min{1,&#956; <sub>A</sub>(x) + &#956; <sub>B</sub>(x)} </span></p>
+			
+                      <br><br>
+                      <div>
+                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                         </div>  
+                      </div>
+					  
                     </p>
                 </section>
                 <!-- /.content -->

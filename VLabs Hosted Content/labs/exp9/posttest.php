@@ -22,48 +22,98 @@
         <!-- jQuery 2.2.3 -->
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <link href="../../src/Styles.css" rel="stylesheet" />
-        <style>
-            .optradio1{
-                padding:20px;
-            }
-        </style>
-        
-        <script>
+		
+		<script>
             $(document).ready(function(){
-                $(".optradio1").click(function(){
-                    ////alert("clicked");
+                $("#view").click(function(){
+                    var count=0;
+					
+                    //alert("clicked");
                     $("#optradio1Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio1Ans").offset().top-300
-                    }, 1000);
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
                     $('.optradio1').attr('disabled','disabled');
-                });
-                $(".optradio2").click(function(){
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="A")
+                    {
+                       count=count+1;
+                    }
+                    
+                
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio2Ans").offset().top-300
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
-                });
-                $(".optradio3").click(function(){
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="C")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio3Ans").offset().top-300
                     }, 1000);
                     $('.optradio3').attr('disabled','disabled');
+
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					
+					
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
                 });
-                $(".optradio4").click(function(){
-                    //alert("clicked");
-                    $("#optradio4Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio4Ans").offset().top-300
-                    }, 1000);
-                    $('.optradio4').attr('disabled','disabled');
-                });
+               
             });
-        </script>
+</script>
+<style type="text/css">
+  .label-medium 
+   {
+       vertical-align: super;
+       font-size: large;
+   }
+  .optradio1
+  {
+      padding:20px;
+  }
+</style>
+
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         
@@ -118,37 +168,49 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom :5%;">
                     <h3 style="margin-top:5%">Post Test</h3>
                     <p class="MsoNormal" style="text-align:justify">
                         <!-- Post Test content goes here -->                        
 						<h3>1.The lambda(&#955;)-cut set of relation A is given by ?</h3><br>
-                        <input type="radio" class="optradio1" name="q1" value="1">A. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)>=&#955;</sub>}<br>
-                        <input type="radio" class="optradio1" name="q1" value="2">B. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)>&#955;</sub>}<br>
-                        <input type="radio" class="optradio1" name="q1" value="3">C. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)=&#955;</sub>}<br>
-                        <input type="radio" class="optradio1" name="q1" value="4">D. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)<=&#955;</sub>}<br>
+						
+                        <input type="radio" class="optradio1" name="optradio1" value="A">A. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)>=&#955;</sub>}<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="B">B. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)>&#955;</sub>}<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="B">C. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)=&#955;</sub>}<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="D">D. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)<=&#955;</sub>}<br>
                         <br />
-                        <p id="optradio1Ans" class="testAns" style="display:none;"> Ans is A</p>
+				         <p id="optradio1Ans" class="testAns" style="display:none;">
+		                 <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+		                 &nbsp; &nbsp; Correct ans: A <br>Explanation :It is known, A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)>=&#955;</sub>} </span></p>
+
+                        
                         
                         <h3>2.Which of the following  defuzzification method would be suitable for a given problem </h3>
 						<img src="images/defuzzi1.PNG"><br><br>
 						<h3>i. Weighted average method.</h3>
 						<h3>ii. Mean-max Method.</h3>
+
+                      <input type="radio" class="optradio2" name="optradio2" value="A"> A. Both i and ii<br>  
+                      <input type="radio" class="optradio2" name="optradio2" value="B"> B. Only i <br>  
+                      <input type="radio" class="optradio2" name="optradio2" value="C"> C. Only ii<br>  
+                      <input type="radio" class="optradio2" name="optradio2" value="D"> D. None of these <br>  
+                      <br>
+                      <p id="optradio2Ans" class="testAns" style="display:none;">
+                      <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : because,some part has max value 1 which is suitable for Mean-Max Method. </span></p>
 						
-                        <input type="radio" class="optradio2" name="q4" value="1"> A. Both i and ii<br>
-                        <input type="radio" class="optradio2" name="q4" value="2"> B. Only i <br>
-                        <input type="radio" class="optradio2" name="q4" value="3"> C. Only ii<br>
-                        <input type="radio" class="optradio2" name="q4" value="4"> D. None of these <br>
-                        <br />
-                        <p id="optradio2Ans" class="testAns" style="display:none;"> Ans is c</p>
-                    </p>
+                        
                         <h3>3.Consider s fuzzy set A = { 0.2/x1, 0.3/x2, 0.4/x3, 0.7/x4 , 0.1/x5 } then (A)<sub>0.3</sub> is given by</h3>
-                       
-                        <input type="radio" class="optradio3" name="q3" value="1"> A. (A)<sub>0.3</sub>={ x1, x5 }<br>
-                        <input type="radio" class="optradio3" name="q3" value="2"> B. (A)<sub>0.3</sub>={ x2, x3, x4 } <br>
-                        <input type="radio" class="optradio3" name="q3" value="3"> C. (A)<sub>0.3</sub>={ x1, x2, x5 }<br>
-                        <input type="radio" class="optradio3" name="q3" value="4"> D. (A)<sub>0.3</sub>={ x3, x4 }<br>  
-                        <p id="optradio3Ans" class="testAns" style="display:none;"> Ans is B</p>
+
+                      <input type="radio" class="optradio3" name="optradio3" value="A"> A.(A)<sub>0.3</sub>={ x1, x5 }<br>   
+                      <input type="radio" class="optradio3" name="optradio3" value="B"> B.(A)<sub>0.3</sub>={ x2, x3, x4 } <br>   
+                      <input type="radio" class="optradio3" name="optradio3" value="C"> C.(A)<sub>0.3</sub>={ x1, x2, x5 }<br>   
+                      <input type="radio" class="optradio3" name="optradio3" value="D"> D.(A)<sub>0.3</sub>={ x3, x4 }<br>    
+                      <br>
+                      <p id="optradio3Ans" class="testAns" style="display:none;">
+                      <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : values greater than or equal to threshold are considered. </span></p>
+						
                             
                        <!-- <h3>4.What is the value of z<sup>*</sup> using Weighted-average Method?</h3><br>
                         <img src="images/dfinal.PNG"><br><br>
@@ -159,6 +221,15 @@
                         <input type="radio" class="optradio4" name="q2" value="4"> D. z<sup>*</sup>=5.41<br><br>
                         <br />
                         <p id="optradio4Ans" class="testAns" style="display:none;"> Ans is D</p> -->
+						
+					  <br><br>
+                      <div>
+                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                         </div>  
+                      </div>
+					  
                     </p>
                 </section>
                 <!-- /.content -->

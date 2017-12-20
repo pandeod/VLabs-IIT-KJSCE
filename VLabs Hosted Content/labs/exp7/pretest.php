@@ -23,33 +23,90 @@
 
         <script>
             $(document).ready(function(){
-                $(".optradio1").click(function(){
-                    ////alert("clicked");
+                $("#view").click(function(){
+                    var count=0;
+					
+                    //alert("clicked");
                     $("#optradio1Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio1Ans").offset().top-300
-                    }, 1000);
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
                     $('.optradio1').attr('disabled','disabled');
-                });
-                $(".optradio2").click(function(){
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="C")
+                    {
+                       count=count+1;
+                    }
+                    
+                
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio2Ans").offset().top-300
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
-                });
-                $(".optradio3").click(function(){
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="A")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio3Ans").offset().top-300
                     }, 1000);
                     $('.optradio3').attr('disabled','disabled');
-                });
 
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
+                });
+               
             });
-        </script>
+</script>
+<style type="text/css">
+  .label-medium 
+   {
+       vertical-align: super;
+       font-size: large;
+   }
+</style>		
+		
 
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
@@ -103,37 +160,54 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom :5%;">
                     <h3 style="margin-top:5%">Pre Test</h3>
                     <p class="MsoNormal" style="text-align:justify">
                         <!-- Pre Test content goes here -->
-                            <h3>1. KSOMs are based on ____________</h3>
-                            <input class="optradio1" type="radio" name="q1" value="1"> A. Perceptron Learning Rule<br>
-                            <input class="optradio1" type="radio" name="q1" value="2"> B. Delta Learning Rule<br />
-                            <input class="optradio1" type="radio" name="q1" value="3"> C. Winner-Takes-All Learning Rule<br />
-                            <input class="optradio1" type="radio" name="q1" value="4"> D. Hebbian Learning Rule<br />
-                            <br />
-                            <p id="optradio1Ans" class="testAns" style="display:none;">Ans is C</p>
-
+                         <h3>1. KSOMs are based on ____________</h3>
+							
+		                 <input type="radio" class="optradio1" name="optradio1" value="A"> A.Perceptron Learning Rule<br>   
+		                 <input type="radio" class="optradio1" name="optradio1" value="B"> B.Delta Learning Rule<br />   
+		                 <input type="radio" class="optradio1" name="optradio1" value="C"> C.Winner-Takes-All Learning Rule<br />   
+		                 <input type="radio" class="optradio1" name="optradio1" value="D"> D.Hebbian Learning Rule<br />  
+		                 <br>
+		                 <p id="optradio1Ans" class="testAns" style="display:none;">
+		                 <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+		                 &nbsp; &nbsp; Correct ans: C</span></p>
+							
+                            
                         <div>
                             <h3>2. Which type of learning is exhibited by the SOM?</h3>
-                            <input class="optradio2" type="radio" name="q2" value="1"> A. Unsupervised Learning<br>
-                            <input class="optradio2" type="radio" name="q2" value="2"> B. Supervised Learning<br>
-                            <input class="optradio2" type="radio" name="q2" value="3"> C. Reinforcement Learning<br>
-                            <input class="optradio2" type="radio" name="q2" value="4"> D. Active Learning<br>
-                            <br>
-                            <p id="optradio2Ans" class="testAns" style="display:none;"> Ans is A</p>
-                        </div>
+							
+                      <input type="radio" class="optradio2" name="optradio2" value="A"> A.Unsupervised Learning<br>   
+                      <input type="radio" class="optradio2" name="optradio2" value="B"> B.Supervised Learning<br>   
+                      <input type="radio" class="optradio2" name="optradio2" value="C"> C.Reinforcement Learning<br>   
+                      <input type="radio" class="optradio2" name="optradio2" value="D"> D.Active Learning<br>   
+                      <br>
+                      <p id="optradio2Ans" class="testAns" style="display:none;">
+                      <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : because,no human intervention is needed during the learning </span></p>
+	                    </div>
 
                         <div>
-                            <h3>3. Can we use any other learning technique, instead of the competitive learning for KSOM?</h3>
-                            <input class="optradio3" type="radio" name="q3" value="1"> A. Yes<br>
-                            <input class="optradio3" type="radio" name="q3" value="2"> B. No<br>
-                            <input class="optradio3" type="radio" name="q3" value="3"> C. Maybe<br>
-                            <input class="optradio3" type="radio" name="q3" value="4"> D. Can't say<br>
-                            <br>
-                            <p id="optradio3Ans" class="testAns" style="display:none;"> Ans is B</p>
-                        </div>
+                            <h3>3. The final convergence takes more time when learning rate is _________ </h3>
+
+                      <input type="radio" class="optradio3" name="optradio3" value="A"> A.more<br>   
+                      <input type="radio" class="optradio3" name="optradio3" value="B"> B.less<br>   
+                      <br>
+                      <p id="optradio3Ans" class="testAns" style="display:none;">
+                      <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation :Time for Convergence is inversely related to learning rate. </span></p>
+                    </div>
+						
+						
+						<br><br>
+                      <div>
+                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                         </div>  
+                      </div>
                     </p>
                 </section>
                 <!-- /.content -->

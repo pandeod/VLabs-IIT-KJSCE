@@ -25,40 +25,110 @@
         
         <script>
             $(document).ready(function(){
-                $(".optradio1").click(function(){
+                $("#view").click(function(){
+                    var count=0;
                     ////alert("clicked");
                     $("#optradio1Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio1Ans").offset().top-300
-                    }, 1000);
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
                     $('.optradio1').attr('disabled','disabled');
-                });
-                $(".optradio2").click(function(){
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="D")
+                    {
+                       count=count+1;
+                    }
+                    
+                
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio2Ans").offset().top-300
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
-                });
-                $(".optradio3").click(function(){
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="C")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio3Ans").offset().top-300
                     }, 1000);
                     $('.optradio3').attr('disabled','disabled');
-                });
-                $(".optradio4").click(function(){
-                    //alert("clicked");
+
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
                     $("#optradio4Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio4Ans").offset().top-300
                     }, 1000);
                     $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val();
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    } 
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="D")
+                    {
+                       count=count+1;
+                    }
+					
+					
+
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
                 });
+               
             });
         </script>
+    <style type="text/css">
+        .label-medium {
+         vertical-align: super;
+          font-size: large;
+       }
+    </style>
+		
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         
@@ -113,54 +183,76 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom:5%;>
                     <h3 style="margin-top:5%">Post Test</h3>
                     <p class="MsoNormal" style="text-align:justify">
+					  
                         <!-- Post Test content goes here -->
                         <h3>1. Why is the XOR problem exceptionally interesting to neural network researchers?</h3>
 
-                        <input type="radio" class="optradio1" name="q1" value="1">A. Because it can be expressed in a way that allows you to use a neural network<br>
-                        <input type="radio" class="optradio1" name="q1" value="2">B. Because it is complex binary operation that cannot be solved using neural networks<br>
-                        <input type="radio" class="optradio1" name="q1" value="3">C. Because it can be solved by a single layer perceptron<br>
-                        <input type="radio" class="optradio1" name="q1" value="4">D. Because it is the simplest linearly inseparable problem that exists<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="A">A. Because it can be expressed in a way that allows you to use a neural network<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="B">B. Because it is complex binary operation that cannot be solved using neural networks<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="C">C. Because it can be solved by a single layer perceptron<br>
+                        <input type="radio" class="optradio1" name="optradio1" value="D">D. Because it is the simplest linearly inseparable problem that exists<br>
                         <br />
-                        <p id="optradio1Ans" class="testAns" style="display:none;"> Ans is D</p>
+						<p id="optradio1Ans" class="testAns" style="display:none;">
+                        <span id="ansQ1">Your ans: &nbsp;</span>
+                        <span style="color:#00b8e6;"> &nbsp; &nbsp; Correct ans: D <br>Explanation :
+                         self-explanatory </span></p>
                         
                         <h3>2. What is back propagation?</h3>
                     
-                        <input type="radio" class="optradio2" name="q2" value="1"> A. It is another name given to the curvy function in the perceptron<br>
-                        <input type="radio" class="optradio2" name="q2" value="2"> B. It is the transmission of error back through the network to adjust the inputs<br>
-                        <input type="radio" class="optradio2" name="q2" value="3"> C. It is the transmission of error back through the network to allow weights to be adjusted so that the network can learn<br>
-                        <input type="radio" class="optradio2" name="q2" value="4"> D. None of the mentioned<br>
+                        <input type="radio" class="optradio2" name="optradio2" value="A"> A. It is another name given to the curvy function in the perceptron<br>
+                        <input type="radio" class="optradio2" name="optradio2" value="B"> B. It is the transmission of error back through the network to adjust the inputs<br>
+                        <input type="radio" class="optradio2" name="optradio2" value="C"> C. It is the transmission of error back through the network to allow weights to be adjusted so that the network can learn<br>
+                        <input type="radio" class="optradio2" name="optradio2" value="D"> D. None of the mentioned<br>
 
                         <br />
-                        <p id="optradio2Ans" class="testAns" style="display:none;"> Ans is A</p>
+						<p id="optradio2Ans" class="testAns" style="display:none;">
+                        <span id="ansQ2">Your ans: &nbsp;</span>
+                        <span style="color:#00b8e6;"> &nbsp; &nbsp; Correct ans: C <br>Explanation :
+                         Back propagation is used to adjust weight of neurons by calculating the gradient of the loss function </span></p>
+                        
 
-                        <h3>3. What type of learning algorithm is used in EBPMLP?</h3>
+                        <h3>3. What type of learning algorithm is used in EBP MLP?</h3>
                     
-                        <input type="radio" class="optradio3" name="q3" value="1"> A. Supervised learning<br>
-                        <input type="radio" class="optradio3" name="q3" value="2"> B. Reinforcement learning<br>
-                        <input type="radio" class="optradio3" name="q3" value="3"> C. Active learning<br>
-                        <input type="radio" class="optradio3" name="q3" value="4"> D. Unsupervised learning<br>      
+                        <input type="radio" class="optradio3" name="optradio3" value="A"> A. Supervised learning<br>
+                        <input type="radio" class="optradio3" name="optradio3" value="B"> B. Reinforcement learning<br>
+                        <input type="radio" class="optradio3" name="optradio3" value="C"> C. Active learning<br>
+                        <input type="radio" class="optradio3" name="optradio3" value="D"> D. Unsupervised learning<br>      
 
                         <br />
-                        <p id="optradio3Ans" class="testAns" style="display:none;"> Ans is C</p>
+						<p id="optradio3Ans" class="testAns" style="display:none;">
+                        <span id="ansQ3">Your ans: &nbsp;</span>
+                        <span style="color:#00b8e6;"> &nbsp; &nbsp; Correct ans: C </span></p>
                             
                         <h3>4. What effect does the learning rate have?</h3>
 
-                        <input type="radio" class="optradio4" name="q4" value="1"> A. Always increases the rate of change of weights<br>
-                        <input type="radio" class="optradio4" name="q4" value="2"> B. Always decreases the rate of change of weights<br>
-                        <input type="radio" class="optradio4" name="q4" value="3"> C. Increases the rate if value too high and decreases the rate if value too low<br>
-                        <input type="radio" class="optradio4" name="q4" value="4"> D. No effect<br>
+                        <input type="radio" class="optradio4" name="optradio4" value="A"> A. Always increases the rate of change of weights<br>
+                        <input type="radio" class="optradio4" name="optradio4" value="B"> B. Always decreases the rate of change of weights<br>
+                        <input type="radio" class="optradio4" name="optradio4" value="C"> C. Increases the rate if value too high and decreases the rate if value too low<br>
+                        <input type="radio" class="optradio4" name="optradio4" value="D"> D. No effect<br>
 
                         <br />
-                        <p id="optradio4Ans" class="testAns" style="display:none;"> Ans is D</p>
+						<p id="optradio4Ans" class="testAns" style="display:none;">
+                        <span id="ansQ4">Your ans: &nbsp;</span>
+                        <span style="color:#00b8e6;"> &nbsp; &nbsp; Correct ans: D <br>Explanation :
+                        Learning rate affects training speed. </span></p>
 
                         <br><br>
                         <b>Hints:- Try these values and verify that you get the correct output.</b>
                         <br><br><b>1. MLP: </b><br>W11 = W12 = W21 = W22 = 1,<br> b1 = 1.5, b2 = 0.5 and b3 = 0.5,<br> V1 = -2 and V2 = 1.
                         <br><br><b>2. EBP: </b><br>W11 = 1, W12 = -1, W21 = 2 and W22 = 3,<br>b1  = b2 = b3 = -1, <br> V1 = -1 and V2 = -2,<br>Learning rate = 0.75 and No. of iterations = 10,00,000.
-                    </p>
+                        <br><br>
+						
+					 <div>
+                        <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                        <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                        </div>  
+                      </div>
+					
+					</p>
                 </section>
                 <!-- /.content -->
         

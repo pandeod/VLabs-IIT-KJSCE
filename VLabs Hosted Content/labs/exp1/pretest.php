@@ -23,34 +23,86 @@
         
         <script>
             $(document).ready(function(){
-                $(".optradio1").click(function(){
+                $("#view").click(function(){
+                    var count=0;
                     ////alert("clicked");
                     $("#optradio1Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio1Ans").offset().top-300
-                    }, 1000);
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
                     $('.optradio1').attr('disabled','disabled');
-                });
-                $(".optradio2").click(function(){
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="B")
+                    {
+                       count=count+1;
+                    }
+                    
+                
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio2Ans").offset().top-300
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
-                });
-                $(".optradio3").click(function(){
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="A")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio3Ans").offset().top-300
                     }, 1000);
                     $('.optradio3').attr('disabled','disabled');
+
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="D")
+                    {
+                       count=count+1;
+                    }
+
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
                 });
                
             });
         </script>
-
+    <style type="text/css">
+        .label-medium {
+         vertical-align: super;
+          font-size: large;
+       }
+    </style>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <?php
@@ -103,58 +155,67 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom:5%; ">
                     <h3 style="margin-top:5%">Pre Test</h3>
                     <p class="MsoNormal" style="text-align:justify">
                         <!-- Pre Test content goes here -->
                         <div>
                             <h3>1. Which of the following is the truth table of NOT Gate?</h3>
                             <div class="radio">
-                                <label><input type="radio" class="optradio1" name="optradio1" id="Q11">A<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input type="radio" class="optradio1" name="optradio1" value="A" id="Q11">A<table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>I/P</th><th>O/P</th></tr>
                                             <tr><td>0</td><td>0</td></tr>
                                             <tr><td>1</td><td>1</td></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" class="optradio1" name="optradio1" id="Q12">B<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input type="radio" class="optradio1" name="optradio1" value="B" id="Q12">B<table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>I/P</th><th>O/P</th></tr>
                                             <tr><td>0</td><td>1</td></tr>
                                             <tr><td>1</td><td>0</td></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" class="optradio1" name="optradio1" id="Q13">C<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input type="radio" class="optradio1" name="optradio1" value="C" id="Q13">C<table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>I/P</th><th>O/P</th></tr>
                                             <tr><td>0</td><td>0</td></tr>
                                             <tr><td>1</td><td>0</td></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" class="optradio1" name="optradio1" id="Q14">D<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input type="radio" class="optradio1" name="optradio1" value="D" id="Q14">D<table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>I/P</th><th>O/P</th></tr>
                                             <tr><td>0</td><td>1</td></tr>
                                             <tr><td>1</td><td>1</td></tr>
                                             </table></label>
                             </div>
-                            <p id="optradio1Ans" class="testAns" style="display:none;"> Ans is B</p>
+                            <p id="optradio1Ans" class="testAns" style="display:none;">
+                            <span id="ansQ1">Your ans: &nbsp;</span>
+                             <span style="color:#00b8e6;">
+                             &nbsp; &nbsp; Correct ans: B <br>Explanation :
+                             o/p is reverse of i/p </span></p>
+                             
                         </div>
                         
                         <div>
                             <h3>2. Two inputs to AND Gate are 0 and 1 respectively. Which of the following will be the output of the AND Gate?</h3>
                             <div class="radio">
-                                <label><input type="radio" class="optradio2" name="optradio2" id="Q21">A. 0</label>
+                                <label><input type="radio" class="optradio2" name="optradio2" value="A" id="Q21">A. 0</label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" class="optradio2" name="optradio2" id="Q22">B. 1</label>
+                                <label><input type="radio" class="optradio2" name="optradio2" value="B" id="Q22">B. 1</label>
                             </div>
-                            <p id="optradio2Ans" class="testAns" style="display:none;"> Ans is A</p>
+                            <p id="optradio2Ans" class="testAns" style="display:none;">
+                            <span id="ansQ2">Your ans: &nbsp;</span><span 
+                            style="color:#00b8e6;">
+                             &nbsp; &nbsp; Correct ans: A <br> Explanation :
+                             o/p of AND gate is 1 , only when all inputs are 1.In other cases o/p is 0. </span> </p>
                         </div>
 
                         <div>
                             <h3>3. Which of the following is the truth table of OR Gate?</h3>
                             <div class="radio">
-                                <label><input type="radio" class="optradio3" name="optradio3" id="Q31">A<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input type="radio" class="optradio3" name="optradio3" value="A" id="Q31">A<table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>I/P #1</th><th>I/P #2</th><th>O/P</th></tr>
                                             <tr><td>0</td><td>0</td><td>0</td></tr>
                                             <tr><td>0</td><td>1</td><td>1</td></tr>
@@ -163,7 +224,7 @@
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" class="optradio3" name="optradio3" id="Q32">B<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input type="radio" class="optradio3" name="optradio3" value="B" id="Q32">B<table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>I/P #1</th><th>I/P #2</th><th>O/P</th></tr>
                                             <tr><td>0</td><td>0</td><td>1</td></tr>
                                             <tr><td>0</td><td>1</td><td>0</td></tr>
@@ -172,7 +233,7 @@
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" class="optradio3" name="optradio3" id="Q33">C<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input type="radio" class="optradio3" name="optradio3" value="C" id="Q33">C<table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>I/P #1</th><th>I/P #2</th><th>O/P</th></tr>
                                             <tr><td>0</td><td>0</td><td>1</td></tr>
                                             <tr><td>0</td><td>1</td><td>1</td></tr>
@@ -181,7 +242,7 @@
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" class="optradio3" name="optradio3" id="Q34">D<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input type="radio" class="optradio3" name="optradio3" value="D" value="D" id="Q34">D<table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>I/P #1</th><th>I/P #2</th><th>O/P</th></tr>
                                             <tr><td>0</td><td>0</td><td>0</td></tr>
                                             <tr><td>0</td><td>1</td><td>1</td></tr>
@@ -189,8 +250,26 @@
                                             <tr><td>1</td><td>1</td><td>1</td></tr>
                                             </table></label>
                             </div>
-                            <p id="optradio3Ans" class="testAns" style="display:none;"> Ans is D</p>
+                            <p id="optradio3Ans" class="testAns" style="margin-bottom:20px;display:none;">
+                             <span id="ansQ3">Your ans: &nbsp; </span>
+                             &nbsp; &nbsp;<span style="color:#00b8e6;"> Correct ans: D
+                             </span><br><span style="color:#00b8e6;"> Explanation :
+                             o/p of OR gate is 0 ,only when all inputs are 0.In other cases o/p is 1. </span></p>
                         </div>
+                     
+                      <div>
+                        <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>
+                     
+                        <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                         <span style="color:white">
+                           Your score is : &nbsp;<span id="score" style="font:20px;
+                            color:white;"> 
+                          </span>&nbsp; out of &nbsp; <span style="color:white"> 3
+                          </span>
+                          </span>
+                        </div>  
+                      </div>
+                      
                     </p>
                 </section>
                 <!-- /.content -->

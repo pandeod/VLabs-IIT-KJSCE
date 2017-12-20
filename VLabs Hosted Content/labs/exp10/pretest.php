@@ -24,7 +24,115 @@
         <!-- Bootstrap 3.3.6 -->
         <script src="../../bootstrap/js/bootstrap.min.js"></script>
         <link href="../../src/Styles.css" rel="stylesheet" />
-        <style>
+		
+<script>
+          correct = [0,2,2,1];
+		  
+          $(document).ready(function(){
+                $("#view").click(function(){
+                    var count=0;
+					
+                    //alert("clicked");
+                    $("#optradio1Ans").slideDown();
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
+                    $('.optradio1').attr('disabled','disabled');
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="A")
+                    {
+                       count=count+1;
+                    }
+                    
+                
+                    //alert("clicked");
+                    $("#optradio2Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio2Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio2').attr('disabled','disabled');
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="C")
+                    {
+                       count=count+1;
+                    }
+                
+                    //alert("clicked");
+                    $("#optradio3Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio3Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio3').attr('disabled','disabled');
+
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
+                });
+               
+            });
+</script>
+<style type="text/css">
+        .label-medium 
+         {
+            vertical-align: super;
+           font-size: large;
+         }
+
           .options{
             font-size: 16px;
             margin-left: 20px;
@@ -36,7 +144,7 @@
             font-weight: bold;
             font-size: 17px;
           }
-        </style>
+</style>
     </head>
 
     <body class="hold-transition skin-blue sidebar-mini">
@@ -82,38 +190,65 @@
           </h1>
         </section>
         <!-- Main content -->
-        <section class="content">
+        <section class="content" style="padding-bottom :5%;">
           <h3 style="margin-top:5%">Pre Test</h3>
           <p class="MsoNormal" style="text-align:justify">
 
             <!-- Pre Test content goes here -->
             <h3>1. What is Fuzzy Inference System?</h3>
-            <input type="radio" class="q1" name="q1"/> <p class="options1 options">A. The process of formulating the mapping from a given input to an output using fuzzy logic.</p>
-            <input type="radio" class="q1" name="q1"/> <p class="options1 options">B. Changing the output value to match the input value to give it an equal balance.</p>
-            <input type="radio" class="q1" name="q1"/> <p class="options1 options">C. Having a larger output than the input.</p>
-            <input type="radio" class="q1" name="q1"/> <p class="options1 options">D. Having a smaller output than the input.</p>
-            <p id="a1" class="testAns" style="display: none;">Ans is A.</p>
+                      <input type="radio" class="optradio1" name="optradio1" value="A"> A. The process of formulating the mapping from a given input to an output using fuzzy logic. <br>   
+		              <input type="radio" class="optradio1" name="optradio1" value="B"> B. Changing the output value to match the input value to give it an equal balance. <br> 
+		              <input type="radio" class="optradio1" name="optradio1" value="C"> C. Having a larger output than the input. <br>  
+		              <input type="radio" class="optradio1" name="optradio1" value="D"> D. Having a smaller output than the input. <br> 
+		              <br>
+		              <p id="optradio1Ans" class="testAns" style="display:none;">
+		              <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+		              &nbsp; &nbsp; Correct ans: A <br>Explanation : It is mapping from i/p to o/p </span></p>
+			
             
-           <!-- <h3>What are the 2 types of Fuzzy Inference Systems?</h3>
-            <input type="radio" class="q2" name="q2"/> <p class="options2 options">A. Model-Type and System-Type</p>
-            <input type="radio" class="q2" name="q2"/> <p class="options2 options">B. Momfred-Type and Semigi-Type</p>
-            <input type="radio" class="q2" name="q2"/> <p class="options2 options">C. Mamdani-Type and Sugeno-Type</p>
-            <input type="radio" class="q2" name="q2"/> <p class="options2 options">D. Mihni-Type and Sujgani-Type</p>
-            <p id="a2" class="testAns" style="display: none;">Ans is C.</p>  -->
+           <h3>2.What are the 2 types of Fuzzy Inference Systems?</h3>
+		   
+                      <input type="radio" class="optradio2" name="optradio2" value="A"> A. Model-Type and System-Type<br>  
+                      <input type="radio" class="optradio2" name="optradio2" value="B"> B. Momfred-Type and Semigi-Type<br>  
+                      <input type="radio" class="optradio2" name="optradio2" value="C"> C. Mamdani-Type and Sugeno-Type<br>  
+                      <input type="radio" class="optradio2" name="optradio2" value="D"> D. Mihni-Type and Sujgani-Type<br>  
+                      <br>
+                      <p id="optradio2Ans" class="testAns" style="display:none;">
+                      <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C </span></p>
+		   
             
-            <h3>2. What operations are performed during inference in a Fuzzy Inference System?</h3>
-            <input type="radio" class="q3" name="q3"/> <p class="options3 options">A. Fuzzification</p>
-            <input type="radio" class="q3" name="q3"/> <p class="options3 options">B. Defuzzification</p>
-            <input type="radio" class="q3" name="q3"/> <p class="options3 options">C. Both A & B</p>
-            <input type="radio" class="q3" name="q3"/> <p class="options3 options">D. None of these</p>
-            <p id="a3" class="testAns" style="display: none;">Ans is C.</p>
+            <h3>3. What operations are performed during inference in a Fuzzy Inference System?</h3>
+			
+                      <input type="radio" class="optradio3" name="optradio3" value="A"> A. Fuzzification<br>  
+                      <input type="radio" class="optradio3" name="optradio3" value="B"> B. Defuzzification<br>  
+                      <input type="radio" class="optradio3" name="optradio3" value="C"> C. Both A & B<br> 
+                      <input type="radio" class="optradio3" name="optradio3" value="D"> D. None of these<br> 
+                      <br>
+                      <p id="optradio3Ans" class="testAns" style="display:none;">
+                      <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : Firstly i/p is fuzzified then defuzzified to give o/p.  </span></p>
+			
 
-            <h3>3. If there are 3 descriptors for dirt and 2 descriptors for grease, how many rules must be defined in Fuzzy rule base?</h3>
-            <input type="radio" class="q4" name="q4"/> <p class="options4 options">A. 5</p>
-            <input type="radio" class="q4" name="q4"/> <p class="options4 options">B. 6</p>
-            <input type="radio" class="q4" name="q4"/> <p class="options4 options">C. Depends on implementation</p>
-            <input type="radio" class="q4" name="q4"/> <p class="options4 options">D. None of these</p>
-            <p id="a4" class="testAns" style="display: none;">Ans is B.</p>
+            <h3>4. If there are 3 descriptors for dirt and 2 descriptors for grease, how many rules must be defined in Fuzzy rule base?</h3>
+			
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.5<br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.6<br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C.Depends on implementation<br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D.None of these<br>  
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : as 2x3=6 combinations can be made.   </span></p>
+
+					  
+			           <br><br>
+                      <div>
+                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                         </div>  
+                      </div>
           </p>
         </section>
         <!-- /.content -->
@@ -121,29 +256,6 @@
       <?php include 'footer.html'; ?>
       <!-- /.content-wrapper -->
         </div>
-        <script>
-          correct = [0,2,2,1];
-          $(".q1").click(function(){
-            $("#a1").slideDown();
-            $("html, body").animate({scrollTop: $("#a1").offset().top - 300});
-            $('.q1').attr('disabled','disabled');
-          });
-          $(".q2").click(function(){
-            $("#a2").slideDown();
-            $("html, body").animate({scrollTop: $("#a2").offset().top - 300});
-            $('.q2').attr('disabled','disabled');
-          });
-          $(".q3").click(function(){
-            $("#a3").slideDown();
-            $("html, body").animate({scrollTop: $("#a3").offset().top - 300});
-            $('.q3').attr('disabled','disabled');
-          });
-          $(".q4").click(function(){
-            $("#a4").slideDown();
-            $("html, body").animate({scrollTop: $("#a4").offset().top - 300});
-            $('.q4').attr('disabled','disabled');
-          });
-        </script>
     </body>
 </html>
 

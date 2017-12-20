@@ -16,11 +16,92 @@
         <!-- Theme style -->
         <link rel="stylesheet" href="../../dist/css/AdminLTE.css">
         <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-
-        
+        <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">     
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <link href="../../src/Styles.css" rel="stylesheet" />
+		
+		<script>
+            $(document).ready(function(){
+                $("#view").click(function(){
+                    var count=0;
+                    ////alert("clicked");
+                    $("#optradio1Ans").slideDown();
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
+                    $('.optradio1').attr('disabled','disabled');
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="A")
+                    {
+                       count=count+1;
+                    }
+                    
+                
+                    //alert("clicked");
+                    $("#optradio2Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio2Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio2').attr('disabled','disabled');
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="A")
+                    {
+                       count=count+1;
+                    }
+                
+                    //alert("clicked");
+                    $("#optradio3Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio3Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio3').attr('disabled','disabled');
+
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="A")
+                    {
+                       count=count+1;
+                    }
+
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
+                });
+               
+            });
+        </script>
+    <style type="text/css">
+        .label-medium {
+         vertical-align: super;
+          font-size: large;
+       }
+    </style>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <?php
@@ -73,100 +154,87 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom:5%;>
                     <h3 style="margin-top:5%">Post Test</h3>
                     <p class="MsoNormal" style="text-align:justify">
                         <!-- Post Test content goes here -->
-                         <script>
-                             $(document).ready(function () {
-                                 $(".optradio1").click(function () {
-                                     ////alert("clicked");
-                                     $("#optradio1Ans").slideDown();
-                                     $('html, body').animate({
-                                        scrollTop: $("#optradio1Ans").offset().top-300
-                                     }, 1000);
-                                     $('.optradio1').attr('disabled','disabled');
-                                 });
-                                 $(".optradio2").click(function () {
-                                     //alert("clicked");
-                                     $("#optradio2Ans").slideDown();
-                                     $('html, body').animate({
-                                        scrollTop: $("#optradio2Ans").offset().top-300
-                                     }, 1000);
-                                     $('.optradio2').attr('disabled','disabled');
-                                 });
-                                 $(".optradio3").click(function () {
-                                     //alert("clicked");
-                                     $("#optradio3Ans").slideDown();
-                                     $('html, body').animate({
-                                        scrollTop: $("#optradio3Ans").offset().top-300
-                                     }, 1000);
-                                     $('.optradio3').attr('disabled','disabled');
-                                 });
-
-                             });
-
-            </script>
-              
-            
               <br>
               <h3>1. Why RBFN is better than Multi layer Perceptron (MLP)?</h3>
-              <input class="optradio1" type="radio" name="q1" value="1">
+              <input class="optradio1" type="radio" name="optradio1" value="A">
               A. Because RBFN performs classification by measuring the input’s similarity to the examples from the training set
               <br>
-              <input class="optradio1" type="radio" name="q1" value="2">
+              <input class="optradio1" type="radio" name="optradio1" value="B">
               B. Because it is easy to solve complex network problem by RBFN than MLP
               <br>
-              <input class="optradio1" type="radio" name="q1" value="3">
+              <input class="optradio1" type="radio" name="optradio1" value="C">
               C. Because RBFN has one single hidden layer
               <br>
-              <input class="optradio1" type="radio" name="q1" value="4">
+              <input class="optradio1" type="radio" name="optradio1" value="D">
               D. None of these
-              <br><p id="optradio1Ans" class="testAns" style="display:none;"> Ans is A</p><br>
+              <br>
+			  <p id="optradio1Ans" class="testAns" style="display:none;">
+     <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+	 &nbsp; &nbsp; Correct ans: A <br>Explanation : self-explanatory </span></p>
+			  <br>
               
               <h3>2. If  the  difference  between  the  input  and  the  prototype  increases ,what will be the effect  on the total response?</h3>
-              <input class="optradio2" type="radio" name="q2" value="1">
+              <input class="optradio2" type="radio" name="optradio2" value="A">
               A. The response will increase exponentially
               <br>
-              <input class="optradio2" type="radio" name="q2" value="2">
+              <input class="optradio2" type="radio" name="optradio2" value="B">
               B. The response will increase linearly
               <br>
-              <input class="optradio2" type="radio" name="q2" value="3">
+              <input class="optradio2" type="radio" name="optradio2" value="C">
               C. The response will fall exponentially
               <br>
-              <input class="optradio2" type="radio" name="q2" value="4">
+              <input class="optradio2" type="radio" name="optradio2" value="D">
               D. The response will not change
-              <br><p id="optradio2Ans" class="testAns" style="display:none;"> Ans is A</p><br>
+              <br>
+			  <p id="optradio2Ans" class="testAns" style="display:none;">
+     <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+	 &nbsp; &nbsp; Correct ans: A <br>Explanation : difference  between  the  input  and  the  prototype  increases -> response increases exponentially  </span></p>
+			  
               <br>
 
               <h3>3.What are the two stages in radial basis function network ?</h3>
-              <input class="optradio3" type="radio" name="q3" value="1">
+              <input class="optradio3" type="radio" name="optradio3" value="A">
               A. Stage 1: establish a centre and a radii for the RBF layer.<br>
 			  &emsp;&emsp;Stage 2: Discover the weights for the output layer.
               <br>
-              <input class="optradio3" type="radio" name="q3" value="2">
+              <input class="optradio3" type="radio" name="optradio3" value="B">
               B. Stage 1: Discover the weights for the output layer.<br>
 			  &emsp;&emsp;Stage 2: establish a centre and a radii for the RBF layer.
               <br>
-              <input class="optradio3" type="radio" name="q3" value="3">
+              <input class="optradio3" type="radio" name="optradio3" value="C">
               C. Stage 1: establish a centre for the RBF layer.<br>
 			  &emsp;&emsp;Stage 2: establish a radii for the RBF layer.
               <br>
-              <input class="optradio3" type="radio" name="q3" value="4">
+              <input class="optradio3" type="radio" name="optradio3" value="D">
               D. Stage 1: establish a centre and a radii for the RBF layer.<br>
 			  &emsp;&emsp;Stage 2: Discover the weights for the hidden layer.
-              <br><p id="optradio3Ans" class="testAns" style="display:none;"> Ans is A</p><br>
+              <br>
+			  <p id="optradio3Ans" class="testAns" style="display:none;">
+     <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+	 &nbsp; &nbsp; Correct ans: A <br>Explanation : Firstly determine centre & then find out radii and weights for o/p layer. </span></p>
+			  
+			  <br>
             
               
               <h3 id="a1"></h3>
               <h3 id="a2"></h3>
              <h3 id="a3"></h3>
+                     
+					 <div>
+                        <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                        <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                        </div>  
+                      </div>
             
-            
-                    </p>
-                </section>
+                 </p>
+              </section>
                 <!-- /.content -->
-            </div>
+          </div>
             <?php include 'footer.html'; ?>
             <!-- /.content-wrapper -->
         </div>

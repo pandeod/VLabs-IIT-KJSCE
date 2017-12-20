@@ -25,40 +25,105 @@
         
         <script>
             $(document).ready(function(){
-                $(".optradio1").click(function(){
+                $("#view").click(function(){
+                    var count=0;
                     ////alert("clicked");
                     $("#optradio1Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio1Ans").offset().top-300
                     }, 1000);
                     $('.optradio1').attr('disabled','disabled');
-                });
-                $(".optradio2").click(function(){
+
+                    var q1 = $('input[name=Q1]:checked').val(); 
+
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+                    
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="D")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio2Ans").offset().top-300
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
-                });
-                $(".optradio3").click(function(){
+
+                    var q2 = $('input[name=Q2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+                    
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="A")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio3Ans").offset().top-300
                     }, 1000);
                     $('.optradio3').attr('disabled','disabled');
-                });
-                $(".optradio4").click(function(){
+
+                    var q3 = $('input[name=Q3]:checked').val(); 
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    }
+                    
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="C")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio4Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio4Ans").offset().top-300
                     }, 1000);
                     $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=Q4]:checked').val();
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    } 
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="D")
+                    {
+                       count=count+1;
+                    }
+
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+
                 });
             });
         </script>
+    <style type="text/css">
+        .label-medium {
+         vertical-align: super;
+          font-size: large;
+       }
+    </style>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         
@@ -113,114 +178,146 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom: 5%;">
                     <h3 style="margin-top:5%">Post Test</h3>
+
                     <p class="MsoNormal" style="text-align:justify">
+                        <form>
                         <!-- Post Test content goes here -->
                         <div>
                             <h3>1. Which of the following can be the correct combination of weights & threshold for the neural network to function as an OR Gate?</h3>
                             <div class="radio">
-                                <label><input name="Q1" type="radio" class="optradio1" value="Q11">A<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input name="Q1" type="radio" class="optradio1" value="A">A
+                                    <table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>W1</th><th>W2</th><th>Threshold</th></tr>
                                             <tr><td>0</td><td>0</td><td >0</td></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input name="Q1" type="radio" class="optradio1" value="Q12">B<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input name="Q1" type="radio" class="optradio1" value="B">B
+                                    <table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>W1</th><th>W2</th><th>Threshold</th></tr>
                                             <tr><td>0</td><td>0</td><td style="text-align: center;">1</td></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input name="Q1" type="radio" class="optradio1" value="Q13">C<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input name="Q1" type="radio" class="optradio1" value="C">C
+                                    <table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>W1</th><th>W2</th><th>Threshold</th></tr>
                                             <tr><td>1</td><td>0</td><td style="text-align: center;">0</td></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input name="Q1" type="radio" class="optradio1" value="Q14">D<table class="table-condensed truthTable" style="text-align: center;">
+                                <label><input name="Q1" type="radio" class="optradio1" value="D">D
+                                    <table class="table-condensed truthTable" style="text-align: center;">
                                             <tr><th>W1</th><th>W2</th><th>Threshold</th></tr>
                                             <tr><td>1</td><td>1</td><td style="text-align: center;">0.5</td></tr>
                                             </table></label>
-                            </div><br />
-                            <p id="optradio1Ans" class="testAns" style="display:none;"> Ans is D</p>
+                            </div><br/>
+                            <p id="optradio1Ans" class="testAns" style="display:none;">
+                            <span id="ansQ1">Your ans: &nbsp;</span>
+                             <span style="color:#00b8e6;">
+                             &nbsp; &nbsp; Correct ans: D <br>Explanation :
+                             IF threshold is 0.5 with W1 & W2 both 1, we get two sets (0,0) with o/p 0 & (0,1)(1,1)(1,0) with o/p 1. </span></p>
                         </div>
                     
                         <div>
                             <h3>2. The experiment performed can be considered as an example of which of the following type of learning?</h3>
                             <div class="radio">
-                                <label><input type="radio" name="Q2" class="optradio2" id="Q12"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q2" class="optradio2" id="Q12" value="A"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>A. Supervised Learning</th></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="Q2" class="optradio2" id="Q22"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q2" class="optradio2" id="Q22" value="B"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>B. Unsupervised Learning</th></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="Q2" class="optradio2" id="Q23"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q2" class="optradio2" id="Q23" value="C"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>C. Reinforcement Learning</th></tr>
                                             </table></label>
                             </div><br />
-                            <p id="optradio2Ans" class="testAns" style="display:none;"> Ans is A</p>
+                            <p id="optradio2Ans" class="testAns" style="display:none;">
+                            <span id="ansQ2">Your ans: &nbsp;</span>
+                             <span style="color:#00b8e6;">
+                             &nbsp; &nbsp; Correct ans: A <br>Explanation :
+                             because output datasets are provided which are used to train the machine. </span></p>
                         </div>
 
                         <div>
                             <h3>3.Given the weights W1 = 0.4 & W2 = 0.3, what should be the threshold value for the neural network to function as AND Gate?</h3>
                             <div class="radio">
-                                <label><input type="radio" name="Q3" class="optradio3" id="Q31"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q3" class="optradio3" id="Q31" value="A"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>A. Greater than 0 but less than 0.3</th></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="Q3" class="optradio3" id="Q32"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q3" class="optradio3" id="Q32" value="B"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>B. Greater than 0.3 but less than 0.4</th></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="Q3" class="optradio3" id="Q33"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q3" class="optradio3" id="Q33" value="C"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>C. Greater than 0.4 but less than 1</th></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="Q3" class="optradio3" id="Q34"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q3" class="optradio3" id="Q34" value="D"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>D. Greater than 1</th></tr>
                                             </table></label>
                             </div><br />
-                            <p id="optradio3Ans" class="testAns" style="display:none;"> Ans is C</p>
+                            <p id="optradio3Ans" class="testAns" style="display:none;">
+                            <span id="ansQ3">Your ans: &nbsp;</span>
+                             <span style="color:#00b8e6;">
+                             &nbsp; &nbsp; Correct ans: C <br>Explanation :
+                             For AND gate,(0,0)(0,1)(1,0) should be in one set which satisfies for 0.4<threshold<1 . </span></p>
                         </div>
                             
                         <div>
                             <h3>4. Which of the following Gates cannot be implemented using single layer perceptron model?</h3>
                             <div class="radio">
-                                <label><input type="radio" name="Q4" class="optradio4" id="Q41"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q4" class="optradio4" id="Q41" value="A"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>A. AND</th></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="Q4" class="optradio4" id="Q42"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q4" class="optradio4" id="Q42" value="B"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>B. OR</th></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="Q4" class="optradio4" id="Q43"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q4" class="optradio4" id="Q43" value="C"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>C. NOT</th></tr>
                                             </table></label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="Q4" class="optradio4" id="Q44"><table class="table-condensed" style="text-align: center;">
+                                <label><input type="radio" name="Q4" class="optradio4" id="Q44" value="D"><table class="table-condensed" style="text-align: center;">
                                             <tr><th>D. XOR</th></tr>
                                             </table></label>
                             </div><br />
-                            <p id="optradio4Ans" class="testAns" style="display:none;"> Ans is D</p>
+                            <p id="optradio4Ans" class="testAns" style="display:none;">
+                            <span id="ansQ4">Your ans: &nbsp;</span>
+                             <span style="color:#00b8e6;">
+                             &nbsp; &nbsp; Correct ans: D <br>Explanation :
+                             because points can not be classified using 2-D seperator for XOR. </span></p>
                         </div>
 
-                        <br><br>
-                        <b>Hints :-</b><br><br>
+                        <br>
+                        <b>Hints :-</b><br>
                         1. And Gate :- Try using 1.5 as threshold and 1 as weights<br>
                         2. Or Gate :- Try using 0.5 as threshold and 1 as weights<br>
-                        3. Not Gate :- Try using -0.5 as threshold and -1 as weight
+                        3. Not Gate :- Try using -0.5 as threshold and -1 as weight <br>
+                        <br>
+
+                      <div>
+                        <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>
+                     
+                        <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                        </div>  
+                      </div>
+                      </form>
                     </p>
                 </section>
                 <!-- /.content -->

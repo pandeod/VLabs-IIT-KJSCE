@@ -22,48 +22,117 @@
         <!-- jQuery 2.2.3 -->
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <link href="../../src/Styles.css" rel="stylesheet" />
-        <style>
-            .optradio1{
-                padding:20px;
-            }
-        </style>
-        
+		       
         <script>
             $(document).ready(function(){
-                $(".optradio1").click(function(){
-                    ////alert("clicked");
+                $("#view").click(function(){
+                    var count=0;
+					
+                    //alert("clicked");
                     $("#optradio1Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio1Ans").offset().top-300
-                    }, 1000);
+                    $('html, body').animate(
+                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
                     $('.optradio1').attr('disabled','disabled');
-                });
-                $(".optradio2").click(function(){
+                    
+                    var q1 = $('input[name=optradio1]:checked').val(); 
+                    
+                    if(q1==null)
+                    {
+                        q1="";
+                    }
+
+                    $('#ansQ1').append(q1);
+
+                    if(q1=="B")
+                    {
+                       count=count+1;
+                    }
+                    
+                
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio2Ans").offset().top-300
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
-                });
-                $(".optradio3").click(function(){
+
+                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+                    if(q2==null)
+                    {
+                        q2="";
+                    }
+
+                    $('#ansQ2').append(q2);
+
+                    if(q2=="A")
+                    {
+                       count=count+1;
+                    }
+                
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio3Ans").offset().top-300
                     }, 1000);
                     $('.optradio3').attr('disabled','disabled');
-                });
-                $(".optradio4").click(function(){
-                    //alert("clicked");
+
+                    var q3 = $('input[name=optradio3]:checked').val();
+
+                    if(q3==null)
+                    {
+                        q3="";
+                    } 
+
+                    $('#ansQ3').append(q3);
+
+                    if(q3=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
                     $("#optradio4Ans").slideDown();
                     $('html, body').animate({
                         scrollTop: $("#optradio4Ans").offset().top-300
                     }, 1000);
                     $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="C")
+                    {
+                       count=count+1;
+                    }
+										
+                    $("#scoreDiv").slideDown();
+
+                    $('#score').text(count);
+                   // alert(count);
+                    
                 });
+               
             });
-        </script>
+</script>
+<style type="text/css">
+  .label-medium 
+   {
+       vertical-align: super;
+       font-size: large;
+   }
+ 
+  .optradio1{
+                padding:20px;
+            }
+  </style>
+		
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         
@@ -118,47 +187,72 @@
                     </h1>
                 </section>
                 <!-- Main content -->
-                <section class="content">
+                <section class="content" style="padding-bottom :5%;">
                     <h3 style="margin-top:5%">Post Test</h3>
                     <p class="MsoNormal" style="text-align:justify">
                         <!-- Post Test content goes here -->                        
                         <h3>1.What is the core region in a graph ?</h3><br>
                          <img src="images/fuzzy2.jpg"><br><br>
-                        <input type="radio" class="optradio1" name="q1" value="1">A. (a,d)<br>
-                        <input type="radio" class="optradio1" name="q1" value="2">B. [b,c]<br>
-                        <input type="radio" class="optradio1" name="q1" value="3">C. [a,b)<br>
-                        <input type="radio" class="optradio1" name="q1" value="4">D. [c,d]<br>
-                        <br />
-                        <p id="optradio1Ans" class="testAns" style="display:none;"> Ans is B</p>
+						 
+		                 <input type="radio" class="optradio1" name="optradio1" value="A"> A. (a,d)<br>   
+		                 <input type="radio" class="optradio1" name="optradio1" value="B"> B. [b,c]<br>  
+		                 <input type="radio" class="optradio1" name="optradio1" value="C"> C. [a,b)<br>  
+		                 <input type="radio" class="optradio1" name="optradio1" value="D"> D. [c,d]<br>
+		                 <br>
+		                 <p id="optradio1Ans" class="testAns" style="display:none;">
+		                 <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+		                 &nbsp; &nbsp; Correct ans: B <br>Explanation : because Degree of Membership is 1 for [b,c]. </span></p>
+						 
+                        
                         
                         <h3>2.Which of the following graphs yields the result of the operation A OR B.</h3>
                         <img src="images/ques21.PNG"><br><br>
-                        <input type="radio" class="optradio2" name="q2" value="1"> A. <image src="images/que2a.PNG"></image><br><br>
-                        <input type="radio" class="optradio2" name="q2" value="2"> B.  <image src="images/ques2b.PNG"></image><br><br>
-                        <input type="radio" class="optradio2" name="q2" value="3"> C. <image src="images/ques2c.PNG"></image><br><br>
-                        <input type="radio" class="optradio2" name="q2" value="4"> D. None Of the above<br><br>
-                        <br />
-                        <p id="optradio2Ans" class="testAns" style="display:none;"> Ans is A</p>
-                    </p>
+			
+		              <input type="radio" class="optradio2" name="optradio2" value="A"> A.<image src="images/que2a.PNG"></image><br><br>   
+                      <input type="radio" class="optradio2" name="optradio2" value="B"> B.<image src="images/ques2b.PNG"></image><br><br>   
+                      <input type="radio" class="optradio2" name="optradio2" value="C"> C.<image src="images/ques2c.PNG"></image><br><br>   
+                      <input type="radio" class="optradio2" name="optradio2" value="D"> D.None Of the above<br><br>   
+                      <br>
+                      <p id="optradio2Ans" class="testAns" style="display:none;">
+                      <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation :Operation A OR B is similar to union. </span></p>
+
+
+                        
                         <h3>3.Considering a graphical representation of the `tallness' of people using its appropriate member function, which of the following combinations are true ?</h3>
                         <h4>i. TALL is usually the fuzzy subset.</h4>
                         <h4>ii. HEIGHT is usually the fuzzy set.</h4>
                         <h4>iii. PEOPLE is usually the universe of discourse.</h4><br>
-                        <input type="radio" class="optradio3" name="q3" value="1"> A. i, ii & iii<br>
-                        <input type="radio" class="optradio3" name="q3" value="2"> B. i & ii only <br>
-                        <input type="radio" class="optradio3" name="q3" value="3"> C. i, iii only<br>
-                        <input type="radio" class="optradio3" name="q3" value="4"> D. ii & iii.<br>      
-                        <br />
-                        <p id="optradio3Ans" class="testAns" style="display:none;"> Ans is B</p>
+						
+                      <input type="radio" class="optradio3" name="optradio3" value="A"> A. i, ii & iii<br>   
+                      <input type="radio" class="optradio3" name="optradio3" value="B"> B. i & ii only <br>   
+                      <input type="radio" class="optradio3" name="optradio3" value="C"> C. i, iii only<br>   
+                      <input type="radio" class="optradio3" name="optradio3" value="D"> D. ii & iii.<br>   
+                      <br>
+                      <p id="optradio3Ans" class="testAns" style="display:none;">
+                      <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : HEIGHT will be the fuzzy set which will contain subsets like TALL,SHORT,etc & Universe of Discourse is range of i/p values not people.  </span></p>
+
                             
                         <h3>4.If A={ 0 &divide x1, 0.4 &divide x2, 1 &divide x3, 0.5 &divide x4 } and B={ 1 &divide x1,0.5 &divide x2,1 &divide x3,0.6 &divide x4 } then &#956 <sub>AuB</sub> </h3>
 
-                        <input type="radio" class="optradio4" name="q4" value="1"> A. &#956 <sub>AuB</sub>={ 0.6 &divide X1, 0.8 &divide X2, 1 &divide X3, 0.2 &divide X4 } <br><br>
-                        <input type="radio" class="optradio4" name="q4" value="2"> B. &#956 <sub>AuB</sub>={ 0.9 &divide X1, 0.7 &divide X2, 0.1 &divide X3, 1 &divide X4 }  <br><br>
-                        <input type="radio" class="optradio4" name="q4" value="3"> C. &#956 <sub>AuB</sub>={ 1 &divide X1, 0.5 &divide X2, 1 &divide X3, 0.6 &divide X4 } <br><br>
-                        <input type="radio" class="optradio4" name="q4" value="4"> D. &#956 <sub>AuB</sub>={ 1 &divide X1, 0.9 &divide X2, 0.6 &divide X3, 0.1 &divide X4 } <br><br>
+                        <input type="radio" class="optradio4" name="optradio4" value="A"> A. &#956 <sub>AuB</sub>={ 0.6 &divide X1, 0.8 &divide X2, 1 &divide X3, 0.2 &divide X4 } <br><br>
+                        <input type="radio" class="optradio4" name="optradio4" value="B"> B. &#956 <sub>AuB</sub>={ 0.9 &divide X1, 0.7 &divide X2, 0.1 &divide X3, 1 &divide X4 }  <br><br>
+                        <input type="radio" class="optradio4" name="optradio4" value="C"> C. &#956 <sub>AuB</sub>={ 1 &divide X1, 0.5 &divide X2, 1 &divide X3, 0.6 &divide X4 } <br><br>
+                        <input type="radio" class="optradio4" name="optradio4" value="D"> D. &#956 <sub>AuB</sub>={ 1 &divide X1, 0.9 &divide X2, 0.6 &divide X3, 0.1 &divide X4 } <br><br>
                         <br />
-                        <p id="optradio4Ans" class="testAns" style="display:none;"> Ans is C</p>
+					  <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : As it is Union,Consider max values. </span></p>
+						
+						
+						<br><br>
+                      <div>
+                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
+                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                         </div>  
+                      </div>
                     </p>
                 </section>
                 <!-- /.content -->
