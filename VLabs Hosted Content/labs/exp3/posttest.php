@@ -61,7 +61,7 @@
 
                     $('#ansQ2').append(q2);
 
-                    if(q2=="A")
+                    if(q2=="C")
                     {
                        count=count+1;
                     }
@@ -86,6 +86,93 @@
                     {
                        count=count+1;
                     }
+					
+					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="D")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="D")
+                    {
+                       count=count+1;
+                    }
+
+					
 
                     $("#scoreDiv").slideDown();
 
@@ -174,7 +261,7 @@
               <br>
 			  <p id="optradio1Ans" class="testAns" style="display:none;">
      <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
-	 &nbsp; &nbsp; Correct ans: A <br>Explanation : self-explanatory </span></p>
+	 &nbsp; &nbsp; Correct ans: A <br>Explanation : RBFN stores training sample and compares it to i/p. </span></p>
 			  <br>
               
               <h3>2. If  the  difference  between  the  input  and  the  prototype  increases ,what will be the effect  on the total response?</h3>
@@ -192,7 +279,7 @@
               <br>
 			  <p id="optradio2Ans" class="testAns" style="display:none;">
      <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
-	 &nbsp; &nbsp; Correct ans: A <br>Explanation : difference  between  the  input  and  the  prototype  increases -> response increases exponentially  </span></p>
+	 &nbsp; &nbsp; Correct ans: C <br>Explanation : As the distance between the input and prototype grows, the response falls off exponentially towards 0.</span></p>
 			  
               <br>
 
@@ -216,10 +303,57 @@
 			  <p id="optradio3Ans" class="testAns" style="display:none;">
      <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 	 &nbsp; &nbsp; Correct ans: A <br>Explanation : Firstly determine centre & then find out radii and weights for o/p layer. </span></p>
-			  
+
+                      <h3>4.Inverse quadratic radial function can be defined as </h3>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A. &phi;(z)=1/(z<sup>2</sup>+r<sup>2</sup>)<sup>1/2</sup>   <br> 
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B. &phi;(z)=1/(z<sup>3</sup>+r<sup>2</sup>)<sup>1/2</sup>  <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C. &phi;(z)=1/(z<sup>2</sup>-r<sup>2</sup>)<sup>1/2</sup>  <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D. &phi;(z)=(z<sup>2</sup>+r<sup>2</sup>)<sup>1/2</sup>  <br>
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : It is known, &phi;(z)=1/(z<sup>2</sup>+r<sup>2</sup>)<sup>1/2</sup>  </span></p>
+
+
+
+                      <h3>5.Choose from the following :</h3>
+					  <b>(i) In RBFN , hidden layer is nonlinear but the output layer is linear.</b><br>
+					  <b>(ii)In MLP , all layers are non-linear. </b><br>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.Only ii is correct   <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.Only ii is incorrect  <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.Both are correct   <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.Both are incorrect   <br>
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : both statements are true.</span></p>
+
+
+
+                      <h3>6.RBFN establish __________ mapping</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.curvy  <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.global <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.slow <br>  
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.local <br>   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation : RBFN establish local mapping , hence faster. </span></p>
+
+
+
+                      <h3>7.Which technique/s are used to update the weights and centers of a RBFN</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.Pseudo-Inverse Technique <br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.Hybrid Learning <br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.backtracking   <br> 
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.both A & B  <br>
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation :Pseudo-Inverse Technique ,Hybrid Learning & Gradient Descent Learning can be used .  </span></p>
+
+	 
 			  <br>
-            
-              
               <h3 id="a1"></h3>
               <h3 id="a2"></h3>
              <h3 id="a3"></h3>
@@ -227,7 +361,7 @@
 					 <div>
                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                         </div>  
                       </div>
             

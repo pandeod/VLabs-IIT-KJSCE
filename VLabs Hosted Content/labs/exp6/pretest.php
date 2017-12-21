@@ -110,6 +110,48 @@
                        count=count+1;
                     }
 					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="B")
+                    {
+                       count=count+1;
+                    }
+					
 										
                     $("#scoreDiv").slideDown();
 
@@ -222,7 +264,7 @@ Output = 2 * (1*4 + 2*10 + 3*5 + 4*20) = 238</span></p>
                    
                     
                             
-                        <h3>4. A neural network can answer</h3>
+                      <h3>4. A neural network can answer</h3>
                       <input type="radio" class="optradio4" name="optradio4" value="A"> A.For loop questions<br>   
                       <input type="radio" class="optradio4" name="optradio4" value="B"> B.what-if questions<br>   
                       <input type="radio" class="optradio4" name="optradio4" value="C"> C.IF-then else questions<br>   
@@ -232,7 +274,29 @@ Output = 2 * (1*4 + 2*10 + 3*5 + 4*20) = 238</span></p>
                       <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: B <br>Explanation : Neural Network can answer to what will happen if this has happened. </span></p>
 
-                        <br><br>
+                      <h3>5.Correlation learning rule states that </h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.if Di is the desired response due to X, the corresponding weight increase is exponential to their product. <br> 
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.if Di is the desired input due, the corresponding weight increase is proportional to their product.  <br> 
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.if Di is the desired response due to X, the corresponding weight increase is proportional to their product.   <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.none of these. <br>  
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : It is statement of correlation learning rule</span></p>
+
+
+
+                      <h3>6.What is difference between Hebbian & Correlation learning rule ?</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.They are based on different principles <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.They falls under different learning category <br>  
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.There is huge difference in operational speed <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.None of these.   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : Hebbian learning rule --> Unsupervised  & Correlation learning rule --> Supervised  </span></p>
+					  
+                        <br>
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >

@@ -113,6 +113,71 @@
                     }
 					
 					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="B")
+                    {
+                       count=count+1;
+                    }
+
+					
+					
 					
                     $("#scoreDiv").slideDown();
 
@@ -228,7 +293,7 @@
                       &nbsp; &nbsp; Correct ans: A <br>Explanation : because, there is no need to provide the network with input-output pairs.</span></p>
 						
 
-                        <h3>4.	In which of the below mentioned cases KSOM can <b>NOT</b> be used?</h3>
+                        <h3>4.In which of the below mentioned cases KSOM can <b>NOT</b> be used?</h3>
 
                       <input type="radio" class="optradio4" name="optradio4" value="A"> A.Clustering of data points into various clusters.<br>   
                       <input type="radio" class="optradio4" name="optradio4" value="B"> B.Unlabeled data which needs to be classified solely based on input features and no output.<br>   
@@ -239,9 +304,45 @@
                       <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: C <br>Explanation :because, i/p & o/p data pairs are required. </span></p>
 						
-                        <br><br>
-                        <b>Hints:- Try these values and verify that you get the correct output.</b>
-                        <!--<br><br><b>1. MLP: </b><br>W11 = W12 = W21 = W22 = 1,<br> b1 = 1.5, b2 = 0.5 and b3 = 0.5,<br> V1 = -2 and V2 = 1.
+						
+                      <h3>5.What is the objective of feature maps?</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.to capture the features in space of input patterns <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.to capture just the input patterns <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.update weights <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.to capture output patterns   
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : objective of feature maps is to capture the features</span></p>
+
+
+
+                      <h3>6. How are weights updated in feature maps?</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.updated for winning unit only <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.updated for neighbours of winner only <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.updated for winning unit and its neighbours <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.none of the mentioned<br>   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation :Weights are updated in feature maps for winning unit and its neighbours. </span></p>
+
+
+
+                      <h3>7.In feature maps, when weights are updated for winning unit and its neighbour, which type learning it is known as?</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.karnaugt learning   <br> 
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.kohonen’s learning   <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.boltmaz learning   <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.none of the mentioned   
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : Self organization network is also known as Kohonen learning. </span></p>
+						
+						
+                        <br>
+                        <!-- <b>Hints:- Try these values and verify that you get the correct output.</b>
+                       <br><br><b>1. MLP: </b><br>W11 = W12 = W21 = W22 = 1,<br> b1 = 1.5, b2 = 0.5 and b3 = 0.5,<br> V1 = -2 and V2 = 1.
                         <br><br><b>2. EBP: </b><br>W11 = 1, W12 = -1, W21 = 2 and W22 = 3,<br>b1  = b2 = b3 = -1, <br> V1 = -1 and V2 = -2,<br>Learning rate = 0.75 and No. of iterations = 10,00,000.!-->
                     
 					
@@ -249,7 +350,7 @@
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                          </div>  
                       </div>
 					</p>

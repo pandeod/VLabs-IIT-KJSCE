@@ -116,6 +116,70 @@
                        count=count+1;
                     }
 					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="D")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					
 					
                     $("#scoreDiv").slideDown();
 
@@ -242,11 +306,46 @@
                       &nbsp; &nbsp; Correct ans: B <br>Explanation : as 2x3=6 combinations can be made.   </span></p>
 
 					  
+		              <h3>5.What Is The First Step Of Fuzzy Logic Toolbox?</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.Fuzzification of the input variables<br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.Defuzzification<br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.Application of the fuzzy operator (AND or OR) in the antecedent<br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.Aggregation of the consequents across the rules<br>   
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : i/p --> Fuzzification --> Inference --> Defuzzification --> o/p </span></p>
+
+
+
+                      <h3>6.What Is The Input And Output Of Step 2 - Apply Fuzzy Operator?</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.The input is a single truth value and the output has two or more values<br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.The input is a value greater than one and the output is a value less than the input<br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.The input and output have both the same values<br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.The input has two or more values and the output has a single truth value<br>   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D</span></p>
+
+
+
+                      <h3>7.What Is The Input And Output Of Step 3 - Apply Implication Method?</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.Input is a fuzzy set but the output is a whole value<br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.Input is a whole value but the output can be a fuzzy set<br>
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.Input and output have the same value<br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.Input is a smaller value than the output value<br>  
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C </span></p>
+			  
+					  
 			           <br><br>
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                          </div>  
                       </div>
           </p>

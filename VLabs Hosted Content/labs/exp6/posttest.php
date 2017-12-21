@@ -91,6 +91,69 @@
                        count=count+1;
                     }
 					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="D")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="B")
+                    {
+                       count=count+1;
+                    }
+					
 					
 					
                     $("#scoreDiv").slideDown();
@@ -190,7 +253,7 @@
                     
                         
                             
-                        <h3>3. What type of activation function is used in this experiment?</h3>
+                      <h3>3. What type of activation function is used in this experiment?</h3>
                       <input type="radio" class="optradio3" name="optradio3" value="A"> A.Hardlimit activation function <br>   
                       <input type="radio" class="optradio3" name="optradio3" value="B"> B.Softlimit activation function<br>   
                       <input type="radio" class="optradio3" name="optradio3" value="C"> C.Both A and B<br>   
@@ -200,8 +263,42 @@
                       <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: A <br>Explanation : because,o/p depends on strict limit. </span></p>
 
-                                                
-                  
+                      <h3>4.Correlation learning law can be represented by equation?</h3>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.∆wij= µ(si) aj <br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.∆wij= µ(bi – si) aj <br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C.∆wij= µ(bi – si) aj Á(xi),where Á(xi) is derivative of xi <br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D.∆wij= µ bi aj   
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation :  Correlation learning law depends on target output(bi). </span></p>
+
+
+
+                      <h3>5.Correlation learning law is special case of?</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.Hebb learning law <br>     
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.Perceptron learning law <br>    
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.Delta learning law <br>    
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.LMS learning law     
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : Since in hebb is replaced by bi(target output) in correlation.  </span></p>
+
+
+
+                      <h3>6. In correlation learning intial weights are set?</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.random <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.to zero <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.near to target value <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.infinite   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : Correlation leads to sum of relation between input & output, inorder to achieve this, the starting initial weight values must be small. </span></p>
+
+					  
+                    <br>
                     <b>Hints:-</b> Try these values and verify that these weights will classify all the points correctly.
                     If you set the weights to any other values, the learning will converge leading approximately to these weights.<br/><br/>
 

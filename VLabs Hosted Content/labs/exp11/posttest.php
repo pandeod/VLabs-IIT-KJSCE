@@ -31,7 +31,7 @@
                     //alert("clicked");
                     $("#optradio1Ans").slideDown();
                     $('html, body').animate(
-                    { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
+                    { scrollTop: $("#optradio1Ans").offset().top-200 }, 1000);
                     $('.optradio1').attr('disabled','disabled');
                     
                     var q1 = $('input[name=optradio1]:checked').val(); 
@@ -52,7 +52,7 @@
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
-                        scrollTop: $("#optradio2Ans").offset().top-300
+                        scrollTop: $("#optradio2Ans").offset().top-200
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
 
@@ -73,7 +73,7 @@
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
-                        scrollTop: $("#optradio3Ans").offset().top-300
+                        scrollTop: $("#optradio3Ans").offset().top-200
                     }, 1000);
                     $('.optradio3').attr('disabled','disabled');
 
@@ -94,7 +94,7 @@
 					//alert("clicked");
                     $("#optradio4Ans").slideDown();
                     $('html, body').animate({
-                        scrollTop: $("#optradio4Ans").offset().top-300
+                        scrollTop: $("#optradio4Ans").offset().top-200
                     }, 1000);
                     $('.optradio4').attr('disabled','disabled');
 
@@ -108,6 +108,69 @@
                     $('#ansQ4').append(q4);
 
                     if(q4=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-200
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-200
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="D")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-200
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="C")
                     {
                        count=count+1;
                     }
@@ -244,11 +307,46 @@
 		              &nbsp; &nbsp; Correct ans: A <br>Explanation : because it is robust and content is not need to be known in advance. </span></p>
 
 					  
+					    <h3>5.Detecting pencil lines in predefined boxes on paper forms is termed as</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.mark sensing <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.mark reading <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.optical marks <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.colored marks <br>   
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : whatever lines that are present inside box are recognised</span></p>
+
+
+
+                      <h3>6.Technique which uses printed characters with iron oxide ink and ink is magnetized for recognition is classified as</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.character recognition     <br> 
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.optical signal recognition     <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.colored ink character recognition    <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.magnetic ink character recognition    <br>
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation : as ink is magnetized. </span></p>
+
+
+
+                      <h3>7.All short lines made by hand and are written by pencil on documents are classified as</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.handwritten characters<br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.printed characters<br>  
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.marks<br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.printed lines<br>   
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C </span></p>
+
+					  
 						<br><br>
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                          </div>  
                       </div>
                     </p>

@@ -113,6 +113,69 @@
                        count=count+1;
                     }
 					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1500);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="D")
+                    {
+                       count=count+1;
+                    }
+					
 					
                     $("#scoreDiv").slideDown();
 
@@ -226,12 +289,46 @@
                       <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: D <br>Explanation :It makes easy to mechanize tasks hence used in designing controllers ,analysers.  </span></p>
 			
+                      
+					  <h3>5.Mamdani's Fuzzy Inference Method Was Designed To Attempt What?</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.Control any two combinations of any two products by synthesising a set of linguistic control rules obtained from experienced human operations. <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.Control a television and remote combination by synthesising a set of linguistic control rules obtained from experienced human operations.<br>  
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.Control a steam engine and a boiler combination by synthesising a set of linguistic control rules obtained from experienced human operations.<br>
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.Control a air craft and feul level combination by synthesising a set of linguistic control rules obtained from experienced human operations.<br>
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : Mamdani's Fuzzy Inference Method Was Designed to Control a steam engine and a boiler combination </span></p>
+
+
+
+                      <h3>6.What Is The Purpose Of Aggregation?</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.To gather all the different fuzzy set outputs and combine them into a single fuzzy set outputs  <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.To gather all the possible inputs and use the average to gain an output<br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.To gather all the different fuzzy set outputs and average them out to get a single value<br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.To subtract all the output fuzzy set values from the input values <br>
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : Aggregation is combining.Here it is done to get single fuzzy set.</span></p>
+
+
+
+                      <h3>7.fuzzy inference procedure is called as ____________</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.Composite rule <br>  
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.Logical rule of inference <br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.Complex rule of inference   <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.compositional rules of inference <br>   
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D<br>Explanation :fuzzy inference procedure is also known as compositional rules of inference.</span></p>
 
 		              <br><br>
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                          </div>  
                       </div>
           </p>

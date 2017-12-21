@@ -89,6 +89,91 @@
                        count=count+1;
                     }
 					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="D")
+                    {
+                       count=count+1;
+                    }
+
+					
 					
                     $("#scoreDiv").slideDown();
 
@@ -199,9 +284,62 @@
                       <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: B <br>Explanation :Time for Convergence is inversely related to learning rate. </span></p>
                     </div>
+					
+				      <h3>4. Neighborhood Functions _________ </h3>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.search for best neighborhood <br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.calcultes total neighbours <br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C.creates bond between two units <br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D.uses incremental algorithm   
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation :The neighborhood function provides a bond between a unit and its
+                     neighbors, and is responsible for the topological ordering of the map.  </span></p>
+
+
+
+                      <h3>5.State whether true or false ? </h3>
+					   <h4> SOM mapps their weights to conform to the given input data with a goal of representing
+                           multidimensional data in an easier and understandable form for the human eye </h4>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.True <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.False  
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : SOM are unsupervised & maps weights to given input.</span></p>
+
+
+
+                      <h3>6.The number of input nodes is ________ the dimensions of the input vector.</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A. less than   <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B. greater than <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C. equal to <br> 
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D. not related to <br> 
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : No.i/p nodes = dimension of i/p vector. </span></p>
+
+
+
+                      <h3>7.Which of the following SOM can do?</h3>
+					   <h5>
+					    i.Clustering <br>
+						ii.Ordering of multidimensional data<br>
+						iii.Control and/or data sensitive processing <br>
+					   </h5>
+					   
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.Only i <br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.i & ii <br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.ii & iii <br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D. all i,ii,iii <br>  
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation : SOM can perform all operations mentioned above. </span></p>
+
 						
-						
-						<br><br>
+						<br>
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >

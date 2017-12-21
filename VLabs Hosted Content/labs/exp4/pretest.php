@@ -88,6 +88,91 @@
                     {
                        count=count+1;
                     }
+					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="D")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="A")
+                    {
+                       count=count+1;
+                    }
+
 
                     $("#scoreDiv").slideDown();
 
@@ -194,11 +279,65 @@
 					    <p id="optradio3Ans" class="testAns" style="display:none;">
                         <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 	                    &nbsp; &nbsp; Correct ans: A </span></p>
+						
+						<h3>4.Which of the following is the model used for learning?</h3>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.Decision trees<br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.Neural networks<br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C.Propositional and FOL rules <br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D. All of the mentioned   
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation :  Decision tress, Neural networks, Propositional rules and FOL rules all are the models oflearning</span></p>
+
+
+
+                      <h3>5. Why are linearly separable problems of interest of neural network researchers?</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A. Because they are the only class of problem that network can solve successfully <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B. Because they are the only class of problem that Perceptron can solve successfully<br>  
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C. Because they are the only mathematical functions that are continue<br>  
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D. Because they are the only mathematical functions you can draw  
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation :  Linearly separable problems of interest of neural network researchers because they are the
+only class of problem that Perceptron can solve successfully. </span></p>
+
+
+
+                      <h3>6.perceptron rule is for _________ classifiers</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.binary <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.tertiary <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.multidimenssional <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.none of these.  
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : perceptron is for binary classifiers.</span></p>
+
+
+
+                      <h3>7.Perceptron learning rule is ________</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A. 
+                      reduce difference between observed (o) and predicted value (t) in small increments to reflect
+                      contribution of particular input value to correctness of output value	<br>				  
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.
+                      reduce difference between observed (o) and input (i) in small increments to reflect
+                      contribution of particular output value to correctness of input value	 <br>				  					  
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.
+                      reduce difference between input value (i) and predicted value (t) in small increments to reflect
+                      contribution of particular output value to correctness of input value	 <br>				  					  
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D. none of these.   
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A </span></p>
+
                        
                      <div>
                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                         </div>  
                       </div>
 					  

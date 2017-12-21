@@ -133,6 +133,48 @@
                        count=count+1;
                     }
 					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="B")
+                    {
+                       count=count+1;
+                    }
+
 					
                     $("#scoreDiv").slideDown();
 
@@ -213,7 +255,7 @@
 <input type="radio" class="optradio1" name="optradio1" value="A"> A.Supervised learning rule   <br>
 <input type="radio" class="optradio1" name="optradio1" value="B"> B.Unsupervised learning rule   <br>
 <input type="radio" class="optradio1" name="optradio1" value="C"> C.Reinforcement learning rule   <br>
-<input type="radio" class="optradio1" name="optradio1" value="D"> D.None of the above   <br>
+<input type="radio" class="optradio1" name="optradio1" value="D"> D.None of the above  
 <br>
 <p id="optradio1Ans" class="testAns" style="display:none;">
 <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
@@ -225,7 +267,7 @@
 <input type="radio" class="optradio2" name="optradio2" value="A"> A.It is very much time dependant   <br>
 <input type="radio" class="optradio2" name="optradio2" value="B"> B.It is strongly interacting   <br>
 <input type="radio" class="optradio2" name="optradio2" value="C"> C.Both A and B   <br>
-<input type="radio" class="optradio2" name="optradio2" value="D"> D.None of the above   <br>
+<input type="radio" class="optradio2" name="optradio2" value="D"> D.None of the above  
 <br>
 <p id="optradio2Ans" class="testAns" style="display:none;">
 <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
@@ -237,7 +279,7 @@
 <input type="radio" class="optradio3" name="optradio3" value="A"> A.Associative learning   <br>
 <input type="radio" class="optradio3" name="optradio3" value="B"> B.Clustering   <br>
 <input type="radio" class="optradio3" name="optradio3" value="C"> C.K-means   <br>
-<input type="radio" class="optradio3" name="optradio3" value="D"> D.Perceptron   <br>
+<input type="radio" class="optradio3" name="optradio3" value="D"> D.Perceptron 
 <br>
 <p id="optradio3Ans" class="testAns" style="display:none;">
 <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
@@ -249,11 +291,11 @@
 <input type="radio" class="optradio4" name="optradio4" value="A"> A.An increase in synaptic efficacy arises from the presynaptic cell's repeated and persistent stimulation of the postsynaptic cell.   <br>
 <input type="radio" class="optradio4" name="optradio4" value="B"> B.Dictating reduction of the strength of synaptic connectivity between neurons following a scenario in which a neuron directly contributes to production of an action potential in another neuron   <br>
 <input type="radio" class="optradio4" name="optradio4" value="C"> C.Both A and B   <br>
-<input type="radio" class="optradio4" name="optradio4" value="D"> D.None of the above   <br>
+<input type="radio" class="optradio4" name="optradio4" value="D"> D.None of the above  
 <br>
 <p id="optradio4Ans" class="testAns" style="display:none;">
 <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
-&nbsp; &nbsp; Correct ans: B <br>Explanation : o/p is reverse of i/p </span></p>
+&nbsp; &nbsp; Correct ans: B</span></p>
 
 
 
@@ -261,15 +303,36 @@
 <input type="radio" class="optradio5" name="optradio5" value="A"> A.Hardlimit activation function   <br>
 <input type="radio" class="optradio5" name="optradio5" value="B"> B.Softlimit activation function   <br>
 <input type="radio" class="optradio5" name="optradio5" value="C"> C.Both A and B   <br>
-<input type="radio" class="optradio5" name="optradio5" value="D"> D.None of the above   <br>
+<input type="radio" class="optradio5" name="optradio5" value="D"> D.None of the above 
 <br>
 <p id="optradio5Ans" class="testAns" style="display:none;">
 <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 &nbsp; &nbsp; Correct ans: B<br>Explanation : o/p is not depend on strict limits.</span></p>
 
+                      <h3>6.If two neighbor neurons activated and deactivated at the same time,then..weight connecting these neurons  ________</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.remains same<br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.decreases <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.increases <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.Can't Say  
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation :weight connecting these neurons increses. </span></p>
+
+
+
+                      <h3>7.If two neighbor neurons activated and deactivated at the different time,then..weight connecting these neurons  ________</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.remains same<br>     
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.decreases <br>     
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.increases <br>      
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.Can't Say     
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : For neurons operating in the opposite phase, the weight between them should decrease.</span></p>
 
                  
-
+                    <br>
                     <b>Hints:-</b> Try these values and verify that these weights will classify all the points correctly.
                     If you set the weights to any other values, the learning will converge leading approximately to these weights.<br/><br/>
 
@@ -288,7 +351,7 @@
 		<div>
            <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-        &nbsp; Your score is : <span id="score"> </span> out of 5
+        &nbsp; Your score is : <span id="score"> </span> out of 7
           </div>  
       </div>
 				    </p>

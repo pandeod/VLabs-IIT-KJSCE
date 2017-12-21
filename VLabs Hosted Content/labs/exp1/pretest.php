@@ -87,6 +87,91 @@
                     {
                        count=count+1;
                     }
+					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="D")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="D")
+                    {
+                       count=count+1;
+                    }
+
 
                     $("#scoreDiv").slideDown();
 
@@ -256,6 +341,54 @@
                              </span><br><span style="color:#00b8e6;"> Explanation :
                              o/p of OR gate is 0 ,only when all inputs are 0.In other cases o/p is 1. </span></p>
                         </div>
+						
+					  <h3>4.A neuron operates by receiving signals from other neurons through connections, called as _________ </h3>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.synapses  <br>  
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.receiving   <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C.neural network <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D.none.  
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : It is defination of synapses </span></p>
+
+
+
+                      <h3>5.What are the types of activation function ?</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.Piecewise Linear <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.Signum <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.Sigmoidal <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.All of these   
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation : Types of activation functions: Hard-limit Activation Function ,
+                       Soft-limit (Sigmoidal) Activation Function,Piecewise Linear Activation Function ,
+					   Signum Activation Function  </span></p>
+
+
+                      <h3>6.Decision boundary classifies __________ </h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.different types of points in same set <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.same type of points in same set <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.activation function in sets  <br> 
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.pixels in different sets
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : Decision boundary divides points into set containing same type of points.  </span></p>
+
+
+
+                      <h3>7.Output is determined w.r.t which value?</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A. initial value of activation function <br>  
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B. upper limit   <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C. lower limit  <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.threshold value 
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation : output is calculated considering threshold value. </span></p>
+
                      
                       <div>
                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>
@@ -264,7 +397,7 @@
                          <span style="color:white">
                            Your score is : &nbsp;<span id="score" style="font:20px;
                             color:white;"> 
-                          </span>&nbsp; out of &nbsp; <span style="color:white"> 3
+                          </span>&nbsp; out of &nbsp; <span style="color:white"> 7
                           </span>
                           </span>
                         </div>  

@@ -87,6 +87,91 @@
                     {
                        count=count+1;
                     }
+					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="B")
+                    {
+                       count=count+1;
+                    }
+
 
                     $("#scoreDiv").slideDown();
 
@@ -202,10 +287,56 @@
                              Neural Networks are Linear functions. </span></p>
                         </div>
 						
+					  <h3>4.There are how many phases of EBP ?</h3>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.3 or more  <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.2   <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C. 2 or more  <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D. 1  
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B<br>Explanation : phases of EBP : Propagation , Weight Update </span></p>
+
+					  
+                      <h3>5.Gradient of loss function can calculated using ________</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A. no. of layers  <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B. threshold value  <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C. error values  <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D. none.  
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : Gradient of loss function can calculated using  error values</span></p>
+
+
+
+                      <h3>6.State whether true or false <br> </h3>
+					   <b>Statement:</b> &nbsp; Universal Approximation Theorem states that a feed-forward network with a <b> multiple </b> hidden layer containing a finite number of neurons can approximate continuous functions on compact subsets of Rn, under mild assumptions on the activation function. 
+					  <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.True   <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.False  <br> 
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : Universal Approximation Theorem is for SINGLE hidden layer. </span></p>
+
+
+
+                      <h3>7.MLP has _________ activation function.</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A. linear     <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B. non-linear <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C. static  <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D. simple <br>
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : MLP has non-linear activation function.  </span></p>
+
+						
 					 <div>
                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                         </div>  
                       </div>
 						

@@ -91,7 +91,68 @@
                        count=count+1;
                     }
 					
+		            //alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="D")
+                    {
+                       count=count+1;
+                    }
 					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="A")
+                    {
+                       count=count+1;
+                    }
 					
                     $("#scoreDiv").slideDown();
 
@@ -211,22 +272,44 @@
                       <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: B <br>Explanation : values greater than or equal to threshold are considered. </span></p>
 						
-                            
-                       <!-- <h3>4.What is the value of z<sup>*</sup> using Weighted-average Method?</h3><br>
-                        <img src="images/dfinal.PNG"><br><br>
-						
-                        <input type="radio" class="optradio4" name="q2" value="1"> A. z<sup>*</sup>=1.2<br><br>
-                        <input type="radio" class="optradio4" name="q2" value="2"> B. z<sup>*</sup>=0.0<br><br>
-                        <input type="radio" class="optradio4" name="q2" value="3"> C. z<sup>*</sup>=4.6<br><br>
-                        <input type="radio" class="optradio4" name="q2" value="4"> D. z<sup>*</sup>=5.41<br><br>
-                        <br />
-                        <p id="optradio4Ans" class="testAns" style="display:none;"> Ans is D</p> -->
+                      <h3>4.Consider s fuzzy set A = { 0.9/x1, 0.3/x2, 0.5/x3, 0.2/x4 } then (&Atilde;)<sub>0.6</sub> is given by</h3>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.(&Atilde;)<sub>0.6</sub>= { x3, x4 }<br> 
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.(&Atilde;)<sub>0.6</sub> = {x1}<br> 
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C. (&Atilde;)<sub>0.6</sub> = {x1,x3}<br>
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D. (&Atilde;)<sub>0.6</sub>  ={ x2, x3, x4 } <br>  
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation :  (&Atilde;)<sub>0.6</sub> --> (A)<sub>0.4</sub> of { 0.1/x1, 0.7/x2, 0.5/x3, 0.8/x4 }  </span></p>
+
+
+
+                      <h3>5.Defuzzifier Converts ________________</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.the fuzzy output of the inference engine to crisp<br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.the crisp output of the inference engine to fuzzy<br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.the static output of the inference engine to dynamic<br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.the dynamic output of the inference engine to static<br>   
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : It converts the fuzzy output of the inference
+                      engine to crisp using membership functions </span></p>
+
+                      <h3>6.What is difference in the value of z<sup>*</sup> using Center of sums and Center of Largest Area ?</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.1.5  <br>  
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.0.2   <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.5.14  <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.1  <br>
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : Using Center of Largest Area =6.5 ; Using Center of sums =5 </span></p>
 						
 					  <br><br>
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                          &nbsp; Your score is : <span id="score"> </span> out of 6
                          </div>  
                       </div>
 					  

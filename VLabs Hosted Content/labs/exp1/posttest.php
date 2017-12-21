@@ -110,6 +110,71 @@
                     {
                        count=count+1;
                     }
+					
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="D")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="C")
+                    {
+                       count=count+1;
+                    }
+
 
                     $("#scoreDiv").slideDown();
 
@@ -302,6 +367,42 @@
                              &nbsp; &nbsp; Correct ans: D <br>Explanation :
                              because points can not be classified using 2-D seperator for XOR. </span></p>
                         </div>
+						
+						
+                      <h3>5. What is supervissed learning?</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.output datasets are provided which are used to train the machine <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.input datasets are absent <br> 
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.both input and output datasets are absent <br>  
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.output datasets are not provided  
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : i/p & o/p pairs are present and used to train data. </span></p>
+
+
+
+                      <h3>6. what is unsupervised learning?</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.output datasets are provided which are used to train the machine <br>    
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.input datasets are absent <br>    
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.both input and output datasets are absent <br>  
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.output datasets are not provided   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation : no output is provided for training purpose </span></p>
+
+
+
+                      <h3>7. If w1=0.5 , w2=0.7 Then what should be the threshold value for Neural network to act as OR gate?</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.value greater than 0.5    <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B. value less than 0.7 <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C. value less than 0.5 & greater than 0  <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D. value less than 1 & greater than 0.5  <br>
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : because, (0,1)(1,0)(1,1) needs to be in one group and (0,0) in other group </span></p>
+
 
                         <br>
                         <b>Hints :-</b><br>

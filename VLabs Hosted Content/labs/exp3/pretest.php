@@ -86,6 +86,92 @@
                     {
                        count=count+1;
                     }
+					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="C")
+                    {
+                       count=count+1;
+                    }
+
+					
 
                     $("#scoreDiv").slideDown();
 
@@ -171,7 +257,7 @@
               <br>
               <input class="optradio1" type="radio" name="optradio1" value="D">
               D. None of these
-              <br>
+ 
 			  <p id="optradio1Ans" class="testAns" style="display:none;">
                <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 	          &nbsp; &nbsp; Correct ans: A  </span></p>
@@ -211,7 +297,54 @@
 			  <p id="optradio3Ans" class="testAns" style="display:none;">
      <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 	 &nbsp; &nbsp; Correct ans: A <br>Explanation : It is known, &#934(x)=e<sup>(-&#946 &times ||x- &#956||<sup>2</sup>)</sup> </span></p>
-                          
+               
+                      <h3>4.State whether true or false ?</h3>
+					  <b>Statement : </b>Each RBFN neuron stores a “prototype”, which is just one of the examples from the training set. <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.True   <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.False   <br>
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : RBFN neuron stores training sample.  </span></p>
+
+
+
+                      <h3>5.transformation from input space to hidden unit space is _________whereas transformation from hidden unit space to output space is ________</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A. non-linear ,non-linear <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B. linear ,non-linear  <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C. non-linear ,linear  <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D. linear ,linear <br> 
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : i/p ----> hidden <sub>non-linear</sub> ----> o/p <sub>linear</sub> </span></p>
+
+
+
+                      <h3>6.From RBFN , we get __________ distribution graph.</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.Exponential  <br>  
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.Normal   <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.Poisson  <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.none of these.  <br>
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : We get Normal distribution graph provided large no. points plotted.</span></p>
+
+
+
+                      <h3>7.beta coefficient in activation function controls _________ of the bell curve?</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.lower limit <br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.height  <br> 
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.width  <br> 
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D. nothing <br>
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : &beta; coefficient controls width of normal distribution graph. </span></p>
+
+			  
+                  <br>			   
               <h3 id="a1"></h3>
               <h3 id="a2"></h3>
               <h3 id="a3"></h3>
@@ -219,7 +352,7 @@
 	                 <div>
                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                         </div>  
                       </div>
 					  

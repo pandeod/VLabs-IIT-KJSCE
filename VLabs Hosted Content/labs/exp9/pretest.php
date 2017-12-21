@@ -89,6 +89,89 @@
                        count=count+1;
                     }
 					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="D")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="C")
+                    {
+                       count=count+1;
+                    }
 					
 					
                     $("#scoreDiv").slideDown();
@@ -199,11 +282,62 @@
                       <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: A <br>Explanation :It is known, &#956; <sub>A<sub>&#816;</sub> &#8853; B<sub>&#816;</sub></sub>(x)=min{1,&#956; <sub>A</sub>(x) + &#956; <sub>B</sub>(x)} </span></p>
 			
+			<h3>4.commonly used defuzzifying methods are:</h3>
+                    i> Centroid of area <br>
+                    ii> Bisector of area <br>
+                    iii> Mean of maximum?<br>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.Only i <br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.Only iii <br>   
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C.all i,ii,iii <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D.None.<br>
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : see methods given theory part </span></p>
+
+
+
+                      <h3>5.Drawback of center of sums</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.It is complex<br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.the intersecting areas are added twice<br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.Not suitable for small intersecting area. <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.All of these.<br>   
+                
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B<br>Explanation : Drawback of center of sums is that the intersecting areas are added twice </span></p>
+
+
+
+                      <h3>6.When Center of largest area method can be used..</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.whent the output of at least two convex fuzzy subsets which are overlapping <br> 
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.whent the output of at least two Concave fuzzy subsets which are <b>NOT</b> overlapping <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.whent the output of three convex fuzzy subsets which are <b>NOT</b> overlapping <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.whent the output of at least two convex fuzzy subsets which are <b>NOT</b> overlapping <br>   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation : graph should be convex and NOT overlapping</span></p>
+
+
+
+                      <h3>7.Output of ___________ is precise quantity</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.Activation Function <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.fuzzification <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.Defuzzification  <br> 
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.None  <br>
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : o/p of Defuzzification are crisp values.  </span></p>
+
+					  
                       <br><br>
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                          </div>  
                       </div>
 					  

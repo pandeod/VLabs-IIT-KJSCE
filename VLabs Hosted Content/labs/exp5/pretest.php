@@ -109,6 +109,70 @@
                     {
                        count=count+1;
                     }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="B")
+                    {
+                       count=count+1;
+                    }
+
 									
                     $("#scoreDiv").slideDown();
 
@@ -191,7 +255,7 @@
                         <input type="radio" class="optradio1" name="optradio1" value="A"> A.(i) and (ii) are true<br>
                         <input type="radio" class="optradio1" name="optradio1" value="B"> B. (i) and (iii) are true<br>  
                         <input type="radio" class="optradio1" name="optradio1" value="C"> C. All the above mentioned<br>   
-                        <input type="radio" class="optradio1" name="optradio1" value="D"> D. None<br>  
+                        <input type="radio" class="optradio1" name="optradio1" value="D"> D. None  
                         <br>
                         <p id="optradio1Ans" class="testAns" style="display:none;">
                          <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
@@ -206,7 +270,7 @@
                          <input type="radio" class="optradio2" name="optradio2" value="A"> A.(ii) and (iii) are true   <br>
                          <input type="radio" class="optradio2" name="optradio2" value="B"> B.(ii) is true   <br>
                          <input type="radio" class="optradio2" name="optradio2" value="C"> C.All of the mentioned   <br>
-                         <input type="radio" class="optradio2" name="optradio2" value="D"> D.None of the mentioned  <br>
+                         <input type="radio" class="optradio2" name="optradio2" value="D"> D.None of the mentioned 
                          <br>
                          <p id="optradio2Ans" class="testAns" style="display:none;">
                          <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
@@ -217,7 +281,7 @@
                       <input type="radio" class="optradio3" name="optradio3" value="A"> A.Linear Functions   <br>
                       <input type="radio" class="optradio3" name="optradio3" value="B"> B.Nonlinear Functions   <br>
                       <input type="radio" class="optradio3" name="optradio3" value="C"> C.Discrete Functions  <br>
-                      <input type="radio" class="optradio3" name="optradio3" value="D"> D.Exponential Functions   <br>
+                      <input type="radio" class="optradio3" name="optradio3" value="D"> D.Exponential Functions 
                       <br>
                       <p id="optradio3Ans" class="testAns" style="display:none;">
                       <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
@@ -235,11 +299,45 @@
                       <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: C <br>Explanation : RNN i.e Recurrent Neural Network has backward links which leads to form directed cycle. </span></p>
 
-                      <br><br>
+                      <h3>5.Hebbian rule is _______</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.change in the synaptic weights of the ith neuron  is equal to a learning rate η times the ith output Oi times the input X. <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.change in the synaptic weights of the ith neuron  is equal to double of learning rate η times the ith output Oi times the input X.    
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.change in the input for ith neuron is equal to a learning rate η times the ith output Oi times the input X. 
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.None of these.   
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation :Hebbian rule is change in the synaptic weights of the ith neuron Wi is equal to a learning rate η times the ith output Oi times the input X.  </span></p>
+
+
+
+                      <h3>6.Unsupervised Hebbian Learning rule is known as ________  ?</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.unsupervised learning <br>  
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.associative learning  <br> 
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.composite learning  <br> 
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.none of these   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : Unsupervised Hebbian Learning rule is known as associative learning. </span></p>
+
+
+
+                      <h3>7.Value of weights initially is ____</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.1   <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.0   <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.depends on problem  <br> 
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.none.   
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : weights are initialised with 0 </span></p>
+					  
+                      <br>
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                          </div>  
                       </div>
                         

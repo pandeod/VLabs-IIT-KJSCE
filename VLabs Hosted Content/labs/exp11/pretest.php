@@ -89,6 +89,91 @@
                        count=count+1;
                     }
 					
+					//alert("clicked");
+                    $("#optradio4Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio4').attr('disabled','disabled');
+
+                    var q4 = $('input[name=optradio4]:checked').val(); 
+
+                    if(q4==null)
+                    {
+                        q4="";
+                    }
+
+                    $('#ansQ4').append(q4);
+
+                    if(q4=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
+
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="C")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="C")
+                    {
+                       count=count+1;
+                    }
+
+					
                     $("#scoreDiv").slideDown();
 
                     $('#score').text(count);
@@ -197,12 +282,58 @@
                       <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: A <br>Explanation :When perception is used in printing means, It is called as optical character recognition </span></p>
 						
-						
+					  
+                       <h3>4.Darker squares represent ______________?</h3>
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.High Altitude <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.High illumination <br>  
+                      <input type="radio" class="optradio4" name="optradio4" value="C"> C.High Density <br>
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D.Low illumination <br>   
+                      <br>
+                      <p id="optradio4Ans" class="testAns" style="display:none;">
+                      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation : Darker squares indicate higher density of zone pixels.</span></p>
+
+
+
+                      <h3>5.A diagram consisting of rectangles whose area is proportional to the frequency of a variable and whose width is equal to the class interval known as _______________</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.Frequency Chart   <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.Smith Chart   <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.Histogram   <br>
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.None.<br>
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation :it is defination of histogram</span></p>
+
+
+
+                      <h3>6. ___________ is a boundary of object, a population of points (pixels), separating object from a background.</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.pixel  <br>  
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.contour <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.dark square <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.None.   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : It is defination of Contour. </span></p>
+
+
+
+                      <h3>7.What is Binarization?</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.Convert an image from any color to greyscale <br>
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.Convert an image into binary numbers <br>  
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.Convert an image from color or greyscale to black-and-white <br>  
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.Identify pixels of image <br>   
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: C <br>Explanation :Binarization means Convertimg an image from color or greyscale to black-and-white separating the text (or any other desired image component) from the background</span></p>
+					  
 						<br><br>
                       <div>
                          <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 3
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                          </div>  
                       </div>
                     </p>

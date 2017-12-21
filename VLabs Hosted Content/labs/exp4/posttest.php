@@ -137,6 +137,49 @@
                     {
                        count=count+1;
                     }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="B")
+                    {
+                       count=count+1;
+                    }
+
 
                     $("#scoreDiv").slideDown();
 
@@ -273,7 +316,32 @@
 	 <p id="optradio5Ans" class="testAns" style="display:none;">
      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 	 &nbsp; &nbsp; Correct ans: A <br>Explanation : because , signum function is hardlimit function. </span></p>						
+                        
+						<h3>6. A perceptron adds up all the weighted inputs it receives, and if it exceeds a certain value, it outputs a
+1, otherwise it just outputs a 0</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.True <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B. False<br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C. Sometimes – it can also output intermediate values as well<br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D. Can't say   
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : Yes the perceptron works like that </span></p>
 
+
+
+                      <h3>7.The name for the function in above question is</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.Natural function<br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.Heaviside Step function<br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.Logistic function<br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.Perceptron function   
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B</span></p>
+
+						
+						<br>
                         <b>Hints:-</b> Try these values and verify that these weights will classify all the points correctly. 
                         Since it is perceptron learning which compares both the actual and desired output. With these inputs, the network weights won't change.
                         If you set the weights to any other values, the learning will converge leading approximately to these weights.<br/><br/>
@@ -294,7 +362,7 @@
                     <div>
                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 5
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                         </div>  
                       </div>
 					  

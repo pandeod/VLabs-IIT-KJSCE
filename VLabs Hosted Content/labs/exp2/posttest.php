@@ -85,7 +85,7 @@
 
                     $('#ansQ3').append(q3);
 
-                    if(q3=="C")
+                    if(q3=="A")
                     {
                        count=count+1;
                     }
@@ -112,7 +112,70 @@
                     }
 					
 					
+					//alert("clicked");
+                    $("#optradio5Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio5Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio5').attr('disabled','disabled');
 
+                    var q5 = $('input[name=optradio5]:checked').val(); 
+
+                    if(q5==null)
+                    {
+                        q5="";
+                    }
+
+                    $('#ansQ5').append(q5);
+
+                    if(q5=="A")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio6Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio6Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio6').attr('disabled','disabled');
+
+                    var q6 = $('input[name=optradio6]:checked').val(); 
+
+                    if(q6==null)
+                    {
+                        q6="";
+                    }
+
+                    $('#ansQ6').append(q6);
+
+                    if(q6=="B")
+                    {
+                       count=count+1;
+                    }
+					
+					//alert("clicked");
+                    $("#optradio7Ans").slideDown();
+                    $('html, body').animate({
+                        scrollTop: $("#optradio7Ans").offset().top-300
+                    }, 1000);
+                    $('.optradio7').attr('disabled','disabled');
+
+                    var q7 = $('input[name=optradio7]:checked').val(); 
+
+                    if(q7==null)
+                    {
+                        q7="";
+                    }
+
+                    $('#ansQ7').append(q7);
+
+                    if(q7=="D")
+                    {
+                       count=count+1;
+                    }
+
+					
                     $("#scoreDiv").slideDown();
 
                     $('#score').text(count);
@@ -224,7 +287,7 @@
                         <br />
 						<p id="optradio3Ans" class="testAns" style="display:none;">
                         <span id="ansQ3">Your ans: &nbsp;</span>
-                        <span style="color:#00b8e6;"> &nbsp; &nbsp; Correct ans: C </span></p>
+                        <span style="color:#00b8e6;"> &nbsp; &nbsp; Correct ans: A </span></p>
                             
                         <h3>4. What effect does the learning rate have?</h3>
 
@@ -239,6 +302,40 @@
                         <span style="color:#00b8e6;"> &nbsp; &nbsp; Correct ans: D <br>Explanation :
                         Learning rate affects training speed. </span></p>
 
+						<h3>5.What is the advantage of basis function over mutilayer feedforward neural networks?</h3>
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A. training of basis function is faster than MLFFNN <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B. training of basis function is slower than MLFFNN <br> 
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C. storing in basis function is faster than MLFFNN <br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D. none of these.  
+                      <br>
+                      <p id="optradio5Ans" class="testAns" style="display:none;">
+                      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: A <br>Explanation : The main advantage of basis function is that the training of basis function is faster than MLFFNN. </span></p>
+
+
+
+                      <h3>6. Pattern recall takes more time for?</h3>
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.MLFNN   <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B.Basis function   <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C.for both MLFNN and basis function <br>   
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D.none.   <br>
+                      <br>
+                      <p id="optradio6Ans" class="testAns" style="display:none;">
+                      <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: B <br>Explanation : because,The first layer of basis function involves computations. </span></p>
+
+
+                      <h3>7.What consist of a basic counterpropagation network?</h3>
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.a feedforward network only <br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.a feedforward network with hidden layer <br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.two feedforward network with hidden layer<br>   
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.Counterpropagation network consist of two feedforward network with a common hidden layer.<br>   
+                      <br>
+                      <p id="optradio7Ans" class="testAns" style="display:none;">
+                      <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation: two feedforward network with a common hidden layer is basis for CN </span></p>
+
+					  						
                         <br><br>
                         <b>Hints:- Try these values and verify that you get the correct output.</b>
                         <br><br><b>1. MLP: </b><br>W11 = W12 = W21 = W22 = 1,<br> b1 = 1.5, b2 = 0.5 and b3 = 0.5,<br> V1 = -2 and V2 = 1.
