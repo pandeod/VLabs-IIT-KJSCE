@@ -255,7 +255,7 @@
 		              <input type="radio" class="optradio1" name="optradio1" value="B"> B. magnetic ink character recognition<br>   
 		              <input type="radio" class="optradio1" name="optradio1" value="C"> C. optical mark reading<br>   
 		              <input type="radio" class="optradio1" name="optradio1" value="D"> D. both a and b<br>  
-		              <br>
+		              
 		              <p id="optradio1Ans" class="testAns" style="display:none;">
 		              <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 		              &nbsp; &nbsp; Correct ans: D <br>Explanation : OCR for recognising content from image, MICR for banking purposes (like cheque recognition). </span></p>
@@ -265,7 +265,7 @@
                     
                         <input type="radio" class="optradio2" name="optradio2" value="A"> A. True<br>
                         <input type="radio" class="optradio2" name="optradio2" value="B"> B. False<br>
-                        <br />
+                        
 						<p id="optradio2Ans" class="testAns" style="display:none;">
                       <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: A <br>Explanation : OCR uses NPL as it is concerned with the interactions between computers and human (natural) languages. </span></p>		  
@@ -277,7 +277,7 @@
                       <input type="radio" class="optradio3" name="optradio3" value="B"> B. Speech recognition<br>  
                       <input type="radio" class="optradio3" name="optradio3" value="C"> C. Simple Perception<br>  
                       <input type="radio" class="optradio3" name="optradio3" value="D"> D. None of the mentioned<br>  
-                      <br>
+                      
                       <p id="optradio3Ans" class="testAns" style="display:none;">
                       <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: A <br>Explanation :When perception is used in printing means, It is called as optical character recognition </span></p>
@@ -288,7 +288,7 @@
                       <input type="radio" class="optradio4" name="optradio4" value="B"> B.High illumination <br>  
                       <input type="radio" class="optradio4" name="optradio4" value="C"> C.High Density <br>
                       <input type="radio" class="optradio4" name="optradio4" value="D"> D.Low illumination <br>   
-                      <br>
+                     
                       <p id="optradio4Ans" class="testAns" style="display:none;">
                       <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: C <br>Explanation : Darker squares indicate higher density of zone pixels.</span></p>
@@ -300,7 +300,7 @@
                       <input type="radio" class="optradio5" name="optradio5" value="B"> B.Smith Chart   <br>
                       <input type="radio" class="optradio5" name="optradio5" value="C"> C.Histogram   <br>
                       <input type="radio" class="optradio5" name="optradio5" value="D"> D.None.<br>
-                      <br>
+                      
                       <p id="optradio5Ans" class="testAns" style="display:none;">
                       <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: C <br>Explanation :it is defination of histogram</span></p>
@@ -312,7 +312,7 @@
                       <input type="radio" class="optradio6" name="optradio6" value="B"> B.contour <br>   
                       <input type="radio" class="optradio6" name="optradio6" value="C"> C.dark square <br>   
                       <input type="radio" class="optradio6" name="optradio6" value="D"> D.None.   
-                      <br>
+                      
                       <p id="optradio6Ans" class="testAns" style="display:none;">
                       <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: B <br>Explanation : It is defination of Contour. </span></p>
@@ -324,7 +324,7 @@
                       <input type="radio" class="optradio7" name="optradio7" value="B"> B.Convert an image into binary numbers <br>  
                       <input type="radio" class="optradio7" name="optradio7" value="C"> C.Convert an image from color or greyscale to black-and-white <br>  
                       <input type="radio" class="optradio7" name="optradio7" value="D"> D.Identify pixels of image <br>   
-                      <br>
+                     
                       <p id="optradio7Ans" class="testAns" style="display:none;">
                       <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: C <br>Explanation :Binarization means Convertimg an image from color or greyscale to black-and-white separating the text (or any other desired image component) from the background</span></p>

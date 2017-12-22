@@ -415,7 +415,7 @@
                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>
                      
                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
-                          &nbsp; Your score is : <span id="score"> </span> out of 4
+                          &nbsp; Your score is : <span id="score"> </span> out of 7
                         </div>  
                       </div>
                       </form>

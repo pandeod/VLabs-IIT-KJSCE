@@ -354,7 +354,7 @@
 
 
 
-                      <h3>5.What are the types of activation function ?</h3>
+                      <h3>5.Which of the following are the types of activation function ?</h3>
                       <input type="radio" class="optradio5" name="optradio5" value="A"> A.Piecewise Linear <br>   
                       <input type="radio" class="optradio5" name="optradio5" value="B"> B.Signum <br>
                       <input type="radio" class="optradio5" name="optradio5" value="C"> C.Sigmoidal <br>   
@@ -387,7 +387,7 @@
                       <br>
                       <p id="optradio7Ans" class="testAns" style="display:none;">
                       <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
-                      &nbsp; &nbsp; Correct ans: D <br>Explanation : output is calculated considering threshold value. </span></p>
+                      &nbsp; &nbsp; Correct ans: D <br>Explanation : output is calculated w.r.t threshold value. </span></p>
 
                      
                       <div>

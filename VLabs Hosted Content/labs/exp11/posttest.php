@@ -31,7 +31,8 @@
                     //alert("clicked");
                     $("#optradio1Ans").slideDown();
                     $('html, body').animate(
-                    { scrollTop: $("#optradio1Ans").offset().top-200 }, 1000);
+                    { scrollTop: $("#optradio1Ans").offset().top-300
+					}, 1000);
                     $('.optradio1').attr('disabled','disabled');
                     
                     var q1 = $('input[name=optradio1]:checked').val(); 
@@ -51,9 +52,9 @@
                 
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio2Ans").offset().top-200
-                    }, 1000);
+                   $('html, body').animate({
+                       scrollTop: $("#optradio2Ans").offset().top-300
+                   }, 1000);
                     $('.optradio2').attr('disabled','disabled');
 
                     var q2 = $('input[name=optradio2]:checked').val(); 
@@ -72,9 +73,9 @@
                 
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio3Ans").offset().top-200
-                    }, 1000);
+                   $('html, body').animate({
+                       scrollTop: $("#optradio3Ans").offset().top-300
+                   }, 1000);
                     $('.optradio3').attr('disabled','disabled');
 
                     var q3 = $('input[name=optradio3]:checked').val();
@@ -93,8 +94,8 @@
 					
 					//alert("clicked");
                     $("#optradio4Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio4Ans").offset().top-200
+                   $('html, body').animate({
+                        scrollTop: $("#optradio4Ans").offset().top-300
                     }, 1000);
                     $('.optradio4').attr('disabled','disabled');
 
@@ -115,7 +116,7 @@
 					//alert("clicked");
                     $("#optradio5Ans").slideDown();
                     $('html, body').animate({
-                        scrollTop: $("#optradio5Ans").offset().top-200
+                        scrollTop: $("#optradio5Ans").offset().top-300
                     }, 1000);
                     $('.optradio5').attr('disabled','disabled');
 
@@ -136,7 +137,7 @@
 					//alert("clicked");
                     $("#optradio6Ans").slideDown();
                     $('html, body').animate({
-                        scrollTop: $("#optradio6Ans").offset().top-200
+                        scrollTop: $("#optradio6Ans").offset().top-300
                     }, 1000);
                     $('.optradio6').attr('disabled','disabled');
 
@@ -157,7 +158,7 @@
 					//alert("clicked");
                     $("#optradio7Ans").slideDown();
                     $('html, body').animate({
-                        scrollTop: $("#optradio7Ans").offset().top-200
+                        scrollTop: $("#optradio7Ans").offset().top-300
                     }, 1000);
                     $('.optradio7').attr('disabled','disabled');
 
@@ -262,7 +263,7 @@
                         <input type="radio" class="optradio1" name="optradio1" value="B">B. Noise Reduction<br>
                         <input type="radio" class="optradio1" name="optradio1" value="C">C. Skew Correction<br>
                         <input type="radio" class="optradio1" name="optradio1" value="D">D. Zoning<br>
-                        <br />
+                        
 		              <p id="optradio1Ans" class="testAns" style="display:none;">
 		              <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 		              &nbsp; &nbsp; Correct ans: D <br>Explanation : because it is feature extraction technique.s </span></p>
@@ -274,7 +275,7 @@
                         <input type="radio" class="optradio2" name="optradio2" value="B"> B. Profiles<br>
                         <input type="radio" class="optradio2" name="optradio2" value="C"> C. Global transformations and moments<br>
                         <input type="radio" class="optradio2" name="optradio2" value="D"> D. Slant Removal<br>
-                        <br />
+                        
 						<p id="optradio2Ans" class="testAns" style="display:none;">
 		              <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 		              &nbsp; &nbsp; Correct ans: D <br>Explanation : because it is pre-processing technique. </span></p>
@@ -290,7 +291,7 @@
                         <div><ol><li>Pre-processing</li><li>Segmentation</li><li>Feature Extraction</li><li>Classification</li><li>Post-processing</li></ol></div><br>
                         <input type="radio" class="optradio3" name="optradio3" value="D"> D. 
                         <div><ol><li>Pre-processing</li><li>Post-processing</li><li>Feature Extraction</li><li>Segmentation</li><li>Classification</li></ol></div><br>
-                        <br>
+                        
 						<p id="optradio3Ans" class="testAns" style="display:none;">
 		              <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 		              &nbsp; &nbsp; Correct ans: A <br>Explanation : image is enhanced -> seperated in constituent characters -> features are extracted from image -> 
@@ -301,7 +302,7 @@
 
                         <input type="radio" class="optradio4" name="optradio4" value="A"> A. Explicit Segmentation<br>
                         <input type="radio" class="optradio4" name="optradio4" value="B"> B. Implicit Segmentation<br>
-                        <br />
+                        
 						<p id="optradio4Ans" class="testAns" style="display:none;">
 		              <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 		              &nbsp; &nbsp; Correct ans: A <br>Explanation : because it is robust and content is not need to be known in advance. </span></p>
@@ -312,7 +313,7 @@
                       <input type="radio" class="optradio5" name="optradio5" value="B"> B.mark reading <br>
                       <input type="radio" class="optradio5" name="optradio5" value="C"> C.optical marks <br>
                       <input type="radio" class="optradio5" name="optradio5" value="D"> D.colored marks <br>   
-                      <br>
+                      
                       <p id="optradio5Ans" class="testAns" style="display:none;">
                       <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: A <br>Explanation : whatever lines that are present inside box are recognised</span></p>
@@ -324,7 +325,7 @@
                       <input type="radio" class="optradio6" name="optradio6" value="B"> B.optical signal recognition     <br>
                       <input type="radio" class="optradio6" name="optradio6" value="C"> C.colored ink character recognition    <br>
                       <input type="radio" class="optradio6" name="optradio6" value="D"> D.magnetic ink character recognition    <br>
-                      <br>
+                      
                       <p id="optradio6Ans" class="testAns" style="display:none;">
                       <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: D <br>Explanation : as ink is magnetized. </span></p>
@@ -336,7 +337,7 @@
                       <input type="radio" class="optradio7" name="optradio7" value="B"> B.printed characters<br>  
                       <input type="radio" class="optradio7" name="optradio7" value="C"> C.marks<br>   
                       <input type="radio" class="optradio7" name="optradio7" value="D"> D.printed lines<br>   
-                      <br>
+                      
                       <p id="optradio7Ans" class="testAns" style="display:none;">
                       <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: C </span></p>
