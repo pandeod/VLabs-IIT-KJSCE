@@ -22,20 +22,19 @@
         <!-- jQuery 2.2.3 -->
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <link href="../../src/Styles.css" rel="stylesheet" />
-		
+
 		<script>
             $(document).ready(function(){
+
                 $("#view").click(function(){
                     var count=0;
-					
+
                     //alert("clicked");
-                    $("#optradio1Ans").slideDown();
                     $('html, body').animate(
                     { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
-                    $('.optradio1').attr('disabled','disabled');
-                    
-                    var q1 = $('input[name=optradio1]:checked').val(); 
-                    
+
+                    var q1 = $('input[name=optradio1]:checked').val();
+
                     if(q1==null)
                     {
                         q1="";
@@ -47,16 +46,10 @@
                     {
                        count=count+1;
                     }
-                    
-                
-                    //alert("clicked");
-                    $("#optradio2Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio2Ans").offset().top-300
-                    }, 1000);
-                    $('.optradio2').attr('disabled','disabled');
 
-                    var q2 = $('input[name=optradio2]:checked').val(); 
+
+
+                    var q2 = $('input[name=optradio2]:checked').val();
 
                     if(q2==null)
                     {
@@ -69,20 +62,14 @@
                     {
                        count=count+1;
                     }
-                
-                    //alert("clicked");
-                    $("#optradio3Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio3Ans").offset().top-300
-                    }, 1000);
-                    $('.optradio3').attr('disabled','disabled');
+
 
                     var q3 = $('input[name=optradio3]:checked').val();
 
                     if(q3==null)
                     {
                         q3="";
-                    } 
+                    }
 
                     $('#ansQ3').append(q3);
 
@@ -90,15 +77,10 @@
                     {
                        count=count+1;
                     }
-					
-		            //alert("clicked");
-                    $("#optradio4Ans").slideDown();
-                    $('html, body').animate({
-                        scrollTop: $("#optradio4Ans").offset().top-300
-                    }, 1000);
-                    $('.optradio4').attr('disabled','disabled');
 
-                    var q4 = $('input[name=optradio4]:checked').val(); 
+		            //alert("clicked");
+
+                    var q4 = $('input[name=optradio4]:checked').val();
 
                     if(q4==null)
                     {
@@ -111,7 +93,7 @@
                     {
                        count=count+1;
                     }
-					
+
 					//alert("clicked");
                     $("#optradio5Ans").slideDown();
                     $('html, body').animate({
@@ -119,7 +101,7 @@
                     }, 1000);
                     $('.optradio5').attr('disabled','disabled');
 
-                    var q5 = $('input[name=optradio5]:checked').val(); 
+                    var q5 = $('input[name=optradio5]:checked').val();
 
                     if(q5==null)
                     {
@@ -132,7 +114,7 @@
                     {
                        count=count+1;
                     }
-					
+
 					//alert("clicked");
                     $("#optradio6Ans").slideDown();
                     $('html, body').animate({
@@ -140,7 +122,7 @@
                     }, 1000);
                     $('.optradio6').attr('disabled','disabled');
 
-                    var q6 = $('input[name=optradio6]:checked').val(); 
+                    var q6 = $('input[name=optradio6]:checked').val();
 
                     if(q6==null)
                     {
@@ -153,18 +135,17 @@
                     {
                        count=count+1;
                     }
-					
+
                     $("#scoreDiv").slideDown();
 
                     $('#score').text(count);
                    // alert(count);
-                    
-                });
-               
+
+
             });
 </script>
 <style type="text/css">
-  .label-medium 
+  .label-medium
    {
        vertical-align: super;
        font-size: large;
@@ -234,7 +215,7 @@
                     <p class="MsoNormal" style="text-align:justify">
                         <!-- Post Test content goes here -->                        
 						<h3>1.The lambda(&#955;)-cut set of relation A is given by ?</h3><br>
-						
+
                         <input type="radio" class="optradio1" name="optradio1" value="A">A. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)>=&#955;</sub>}<br>
                         <input type="radio" class="optradio1" name="optradio1" value="B">B. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)>&#955;</sub>}<br>
                         <input type="radio" class="optradio1" name="optradio1" value="B">C. A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)=&#955;</sub>}<br>
@@ -244,39 +225,39 @@
 		                 <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 		                 &nbsp; &nbsp; Correct ans: A <br>Explanation :It is known, A<sub>&#955;</sub>={x|&#956;<sub>A</sub>(x)>=&#955;</sub>} </span></p>
 
-                        
+
                         
                         <h3>2.Which of the following  defuzzification method would be suitable for a given problem </h3>
-						<img src="images/defuzzi1.PNG"><br><br>
+						<img src="images/defuzzi1.png"><br><br>
 						<h3>i. Weighted average method.</h3>
 						<h3>ii. Mean-max Method.</h3>
 
-                      <input type="radio" class="optradio2" name="optradio2" value="A"> A. Both i and ii<br>  
-                      <input type="radio" class="optradio2" name="optradio2" value="B"> B. Only i <br>  
-                      <input type="radio" class="optradio2" name="optradio2" value="C"> C. Only ii<br>  
-                      <input type="radio" class="optradio2" name="optradio2" value="D"> D. None of these <br>  
+                      <input type="radio" class="optradio2" name="optradio2" value="A"> A. Both i and ii<br>
+                      <input type="radio" class="optradio2" name="optradio2" value="B"> B. Only i <br>
+                      <input type="radio" class="optradio2" name="optradio2" value="C"> C. Only ii<br>
+                      <input type="radio" class="optradio2" name="optradio2" value="D"> D. None of these <br>
                       <br>
                       <p id="optradio2Ans" class="testAns" style="display:none;">
                       <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: C <br>Explanation : because,some part has max value 1 which is suitable for Mean-Max Method. </span></p>
-						
-                        
+
+
                         <h3>3.Consider s fuzzy set A = { 0.2/x1, 0.3/x2, 0.4/x3, 0.7/x4 , 0.1/x5 } then (A)<sub>0.3</sub> is given by</h3>
 
-                      <input type="radio" class="optradio3" name="optradio3" value="A"> A.(A)<sub>0.3</sub>={ x1, x5 }<br>   
-                      <input type="radio" class="optradio3" name="optradio3" value="B"> B.(A)<sub>0.3</sub>={ x2, x3, x4 } <br>   
-                      <input type="radio" class="optradio3" name="optradio3" value="C"> C.(A)<sub>0.3</sub>={ x1, x2, x5 }<br>   
-                      <input type="radio" class="optradio3" name="optradio3" value="D"> D.(A)<sub>0.3</sub>={ x3, x4 }<br>    
+                      <input type="radio" class="optradio3" name="optradio3" value="A"> A.(A)<sub>0.3</sub>={ x1, x5 }<br>
+                      <input type="radio" class="optradio3" name="optradio3" value="B"> B.(A)<sub>0.3</sub>={ x2, x3, x4 } <br>
+                      <input type="radio" class="optradio3" name="optradio3" value="C"> C.(A)<sub>0.3</sub>={ x1, x2, x5 }<br>
+                      <input type="radio" class="optradio3" name="optradio3" value="D"> D.(A)<sub>0.3</sub>={ x3, x4 }<br>
                       <br>
                       <p id="optradio3Ans" class="testAns" style="display:none;">
                       <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: B <br>Explanation : values greater than or equal to threshold are considered. </span></p>
-						
+
                       <h3>4.Consider s fuzzy set A = { 0.9/x1, 0.3/x2, 0.5/x3, 0.2/x4 } then (&Atilde;)<sub>0.6</sub> is given by</h3>
-                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.(&Atilde;)<sub>0.6</sub>= { x3, x4 }<br> 
-                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.(&Atilde;)<sub>0.6</sub> = {x1}<br> 
+                      <input type="radio" class="optradio4" name="optradio4" value="A"> A.(&Atilde;)<sub>0.6</sub>= { x3, x4 }<br>
+                      <input type="radio" class="optradio4" name="optradio4" value="B"> B.(&Atilde;)<sub>0.6</sub> = {x1}<br>
                       <input type="radio" class="optradio4" name="optradio4" value="C"> C. (&Atilde;)<sub>0.6</sub> = {x1,x3}<br>
-                      <input type="radio" class="optradio4" name="optradio4" value="D"> D. (&Atilde;)<sub>0.6</sub>  ={ x2, x3, x4 } <br>  
+                      <input type="radio" class="optradio4" name="optradio4" value="D"> D. (&Atilde;)<sub>0.6</sub>  ={ x2, x3, x4 } <br>
                       <br>
                       <p id="optradio4Ans" class="testAns" style="display:none;">
                       <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
@@ -285,10 +266,10 @@
 
 
                       <h3>5.Defuzzifier Converts ________________</h3>
-                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.the fuzzy output of the inference engine to crisp<br>   
-                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.the crisp output of the inference engine to fuzzy<br>   
-                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.the static output of the inference engine to dynamic<br>   
-                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.the dynamic output of the inference engine to static<br>   
+                      <input type="radio" class="optradio5" name="optradio5" value="A"> A.the fuzzy output of the inference engine to crisp<br>
+                      <input type="radio" class="optradio5" name="optradio5" value="B"> B.the crisp output of the inference engine to fuzzy<br>
+                      <input type="radio" class="optradio5" name="optradio5" value="C"> C.the static output of the inference engine to dynamic<br>
+                      <input type="radio" class="optradio5" name="optradio5" value="D"> D.the dynamic output of the inference engine to static<br>
                       <br>
                       <p id="optradio5Ans" class="testAns" style="display:none;">
                       <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
@@ -296,7 +277,7 @@
                       engine to crisp using membership functions </span></p>
 
                       <h3>6.What is difference in the value of z<sup>*</sup> using Center of sums and Center of Largest Area ?</h3>
-                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.1.5  <br>  
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.1.5  <br>
                       <input type="radio" class="optradio6" name="optradio6" value="B"> B.0.2   <br>
                       <input type="radio" class="optradio6" name="optradio6" value="C"> C.5.14  <br>
                       <input type="radio" class="optradio6" name="optradio6" value="D"> D.1  <br>
@@ -307,12 +288,12 @@
 						
 					  <br><br>
                       <div>
-                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                         <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>
                          <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
                           &nbsp; Your score is : <span id="score"> </span> out of 6
-                         </div>  
+                         </div>
                       </div>
-					  
+
                     </p>
                 </section>
                 <!-- /.content -->

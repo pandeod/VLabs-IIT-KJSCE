@@ -32,15 +32,15 @@
             $(document).ready(function(){
                 $("#view").click(function(){
                     var count=0;
-					
+
                     ////alert("clicked");
                     $("#optradio1Ans").slideDown();
                     $('html, body').animate(
                     { scrollTop: $("#optradio1Ans").offset().top-300 }, 1000);
                     $('.optradio1').attr('disabled','disabled');
-                    
-                    var q1 = $('input[name=optradio1]:checked').val(); 
-                    
+
+                    var q1 = $('input[name=optradio1]:checked').val();
+
                     if(q1==null)
                     {
                         q1="";
@@ -52,8 +52,8 @@
                     {
                        count=count+1;
                     }
-                    
-                
+
+
                     //alert("clicked");
                     $("#optradio2Ans").slideDown();
                     $('html, body').animate({
@@ -61,7 +61,7 @@
                     }, 1000);
                     $('.optradio2').attr('disabled','disabled');
 
-                    var q2 = $('input[name=optradio2]:checked').val(); 
+                    var q2 = $('input[name=optradio2]:checked').val();
 
                     if(q2==null)
                     {
@@ -74,7 +74,7 @@
                     {
                        count=count+1;
                     }
-                
+
                     //alert("clicked");
                     $("#optradio3Ans").slideDown();
                     $('html, body').animate({
@@ -87,7 +87,7 @@
                     if(q3==null)
                     {
                         q3="";
-                    } 
+                    }
 
                     $('#ansQ3').append(q3);
 
@@ -95,7 +95,7 @@
                     {
                        count=count+1;
                     }
-					
+
 					//alert("clicked");
                     $("#optradio4Ans").slideDown();
                     $('html, body').animate({
@@ -103,7 +103,7 @@
                     }, 1000);
                     $('.optradio4').attr('disabled','disabled');
 
-                    var q4 = $('input[name=optradio4]:checked').val(); 
+                    var q4 = $('input[name=optradio4]:checked').val();
 
                     if(q4==null)
                     {
@@ -116,7 +116,7 @@
                     {
                        count=count+1;
                     }
-					
+
 					//alert("clicked");
                     $("#optradio5Ans").slideDown();
                     $('html, body').animate({
@@ -124,7 +124,7 @@
                     }, 1000);
                     $('.optradio5').attr('disabled','disabled');
 
-                    var q5 = $('input[name=optradio5]:checked').val(); 
+                    var q5 = $('input[name=optradio5]:checked').val();
 
                     if(q5==null)
                     {
@@ -137,7 +137,7 @@
                     {
                        count=count+1;
                     }
-					
+
 					//alert("clicked");
                     $("#optradio6Ans").slideDown();
                     $('html, body').animate({
@@ -145,7 +145,7 @@
                     }, 1000);
                     $('.optradio6').attr('disabled','disabled');
 
-                    var q6 = $('input[name=optradio6]:checked').val(); 
+                    var q6 = $('input[name=optradio6]:checked').val();
 
                     if(q6==null)
                     {
@@ -158,7 +158,7 @@
                     {
                        count=count+1;
                     }
-					
+
 					//alert("clicked");
                     $("#optradio7Ans").slideDown();
                     $('html, body').animate({
@@ -166,7 +166,7 @@
                     }, 1000);
                     $('.optradio7').attr('disabled','disabled');
 
-                    var q7 = $('input[name=optradio7]:checked').val(); 
+                    var q7 = $('input[name=optradio7]:checked').val();
 
                     if(q7==null)
                     {
@@ -185,9 +185,9 @@
 
                     $('#score').text(count);
                    // alert(count);
-                    
+
                 });
-               
+
             });
         </script>
     <style type="text/css">
@@ -196,7 +196,7 @@
           font-size: large;
        }
     </style>
-	
+
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         
@@ -265,7 +265,7 @@
 	 <p id="optradio1Ans" class="testAns" style="display:none;">
      <span id="ansQ1">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 	 &nbsp; &nbsp; Correct ans: A <br>Explanation : Perceptron learning rule comes under supervised learning. </span></p>
-                        
+
                         
                         <h3>2. Having multiple perceptrons can actually solve the XOR problem satisfactorily: this is because each perceptron can partition off a linear part of the space itself, and they can then combine their results.</h3>
                     
@@ -277,23 +277,23 @@
                         <br />
 	 <p id="optradio2Ans" class="testAns" style="display:none;">
      <span id="ansQ2">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
-	 &nbsp; &nbsp; Correct ans: C <br>Explanation : because of supervised learning ,perceptron has to be explicitly coded with i/p & o/p pairs.  </span></p>						
-                        
+	 &nbsp; &nbsp; Correct ans: C <br>Explanation : because of supervised learning ,perceptron has to be explicitly coded with i/p & o/p pairs.  </span></p>
+
 
                         <h3>3. What is the limitation of perceptron learning rule?</h3>
                     
                         <input type="radio" class="optradio3" name="optradio3" value="A"> A. No limitation it can solve almost any problem<br>
                         <input type="radio" class="optradio3" name="optradio3" value="B"> B. It is a weak algorithm<br>
                         <input type="radio" class="optradio3" name="optradio3" value="C"> C. It can only solve problems which are linearly seperable<br>
-                        <input type="radio" class="optradio3" name="optradio3" value="D"> D. It cannot converge to a correct solution,even if there exists a solution<br>      
+                        <input type="radio" class="optradio3" name="optradio3" value="D"> D. It cannot converge to a correct solution,even if there exists a solution<br>
                         <br />
 	 <p id="optradio3Ans" class="testAns" style="display:none;">
      <span id="ansQ3">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
 	 &nbsp; &nbsp; Correct ans: C <br>Explanation : because, Perceptron is linear classifier. </span></p>
-                        
+
                             
                         <h3>4. Which of these following will correctly classify the points as shown in this figure:</h3>
-                        <image src="images/Question.PNG" width="200px"/><br/>
+                        <image src="images/Question.png" width="200px"/><br/>
 
                         <input type="radio" class="optradio4" name="optradio4" value="A"> A. <image src="images/option1.PNG" width="200px"/><br>
                         <br>
@@ -304,8 +304,8 @@
                         <br />
 	 <p id="optradio4Ans" class="testAns" style="display:none;">
      <span id="ansQ4">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
-	 &nbsp; &nbsp; Correct ans: D <br>Explanation : as same type of points are in same set or class. </span></p>						
-                        
+	 &nbsp; &nbsp; Correct ans: D <br>Explanation : as same type of points are in same set or class. </span></p>
+
                         <h3>5. What type of activation function is used in this experiment?</h3>
 
                         <input type="radio" class="optradio5" name="optradio5" value="A"> A. Hardlimit activation function <br>
@@ -315,14 +315,14 @@
                         <br />
 	 <p id="optradio5Ans" class="testAns" style="display:none;">
      <span id="ansQ5">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
-	 &nbsp; &nbsp; Correct ans: A <br>Explanation : because , signum function is hardlimit function. </span></p>						
-                        
+	 &nbsp; &nbsp; Correct ans: A <br>Explanation : because , signum function is hardlimit function. </span></p>
+
 						<h3>6. A perceptron adds up all the weighted inputs it receives, and if it exceeds a certain value, it outputs a
 1, otherwise it just outputs a 0</h3>
-                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.True <br>   
-                      <input type="radio" class="optradio6" name="optradio6" value="B"> B. False<br>   
-                      <input type="radio" class="optradio6" name="optradio6" value="C"> C. Sometimes – it can also output intermediate values as well<br>   
-                      <input type="radio" class="optradio6" name="optradio6" value="D"> D. Can't say   
+                      <input type="radio" class="optradio6" name="optradio6" value="A"> A.True <br>
+                      <input type="radio" class="optradio6" name="optradio6" value="B"> B. False<br>
+                      <input type="radio" class="optradio6" name="optradio6" value="C"> C. Sometimes – it can also output intermediate values as well<br>
+                      <input type="radio" class="optradio6" name="optradio6" value="D"> D. Can't say
                       <br>
                       <p id="optradio6Ans" class="testAns" style="display:none;">
                       <span id="ansQ6">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
@@ -331,18 +331,18 @@
 
 
                       <h3>7.The name for the function in above question is</h3>
-                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.Natural function<br>   
-                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.Heaviside Step function<br>   
-                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.Logistic function<br>   
-                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.Perceptron function   
+                      <input type="radio" class="optradio7" name="optradio7" value="A"> A.Natural function<br>
+                      <input type="radio" class="optradio7" name="optradio7" value="B"> B.Heaviside Step function<br>
+                      <input type="radio" class="optradio7" name="optradio7" value="C"> C.Logistic function<br>
+                      <input type="radio" class="optradio7" name="optradio7" value="D"> D.Perceptron function
                       <br>
                       <p id="optradio7Ans" class="testAns" style="display:none;">
                       <span id="ansQ7">Your ans: &nbsp;</span> <span style="color:#00b8e6;">
                       &nbsp; &nbsp; Correct ans: B</span></p>
 
-						
+
 						<br>
-                        <b>Hints:-</b> Try these values and verify that these weights will classify all the points correctly. 
+                        <b>Hints:-</b> Try these values and verify that these weights will classify all the points correctly.
                         Since it is perceptron learning which compares both the actual and desired output. With these inputs, the network weights won't change.
                         If you set the weights to any other values, the learning will converge leading approximately to these weights.<br/><br/>
 
@@ -358,14 +358,14 @@
                         w<sub>32</sub> = -1, 
                         w<sub>33</sub> = -1.5
 						<br><br>
-						
+
                     <div>
-                        <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>     
+                        <button style="float:right;" type="button" name="submit" id="view" class="btn btn-primary"> view Answers </button>
                         <div disabled id="scoreDiv" class="label label-success label-medium" style="padding:1%;display: none; float:left;" >
                           &nbsp; Your score is : <span id="score"> </span> out of 7
-                        </div>  
+                        </div>
                       </div>
-					  
+
 					</p>
                 </section>
                 <!-- /.content -->
