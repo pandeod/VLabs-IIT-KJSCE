@@ -88,7 +88,8 @@
                      Here finally you can provide a grease percent and dirt percent as input, and get the required wash time as output.
                      <li>If you want any changes to be made to the inference table, you can do so by clicking the  <button class="btn-warning btn-md" onclick="back()" data-toggle="tooltip" title="" style="">&larr; Edit Inference Table</button> button.
                      <li>Once you are completely sure regarding the inference table and descriptors, you can click the <button data-toggle="tooltip" title="" id="proceed" class="btn-success btn-md" onclick="fuzzify(document.getElementById('grease_trial').value,document.getElementById('dirt_trial').value)">Find Wash Time</button> button to get your wash time.
-                     <li>Now the defuzzified output is calculated using the centroid method which would requires the calculation of areas and centroids for all descriptors. The display of calculations involved is displayed in a sequential manner which explains the defuzzification process and the formula involved. Finally the output wash time is displayed as the output.
+                     <li>Now the defuzzified output is calculated using the centroid method which would requires the calculation of areas and centroids for all descriptors. The display of calculations involved is displayed in a sequential manner which explains the defuzzification process and the formula involved. Finally the output wash time is displayed as the output.</li>
+                     </ol>
           </p>
         </section>
         <!-- /.content -->
